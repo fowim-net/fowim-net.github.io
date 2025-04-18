@@ -22,7 +22,8 @@ body {
 
 footer {
     position: fixed; bottom: 0;
-    background-color: #000000;
+    background-color: #00000086;
+    text-align: left;
 }
 
 h1 {
@@ -36,7 +37,7 @@ h2 {
 
 a {font-size: 12px;}
 
-header, footer, nav, aside, main {
+header, nav, aside, main {
 /*     background-color: #000000b8; */
     text-align: center;
 /*     border-style: dotted; */
