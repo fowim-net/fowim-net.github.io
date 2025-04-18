@@ -16,10 +16,15 @@ body {
     display: flex;
     flex-direction: column;
     padding: 0.5em;
-    /* background-image: url(IMG/back.png); */
     background-color: #000000;
     color: #ffffff;
 }
+
+footer {
+    position: fixed; bottom: 0;
+    background-color: #000000;
+}
+
 h1 {
     font-family: 'HAN';
     font-size: 100px;
@@ -68,6 +73,7 @@ main {
     max-width: 800px; /* Empêche le contenu d'être trop large */
     display: flex;
     flex-direction: column;
+
 }
 
 
@@ -114,7 +120,7 @@ ul{
     }
 
     nav {
-        flex: 0.5; /* Prend 1 partie de l'espace */
+        flex: 1; /* Prend 1 partie de l'espace */
         min-width: 200px; /* Pour éviter qu'il devienne trop petit */
     }
     
