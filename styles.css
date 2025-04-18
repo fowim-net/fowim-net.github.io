@@ -24,6 +24,8 @@ footer {
     position: fixed; bottom: 0;
     background-color: #00000086;
     text-align: left;
+    padding: 0.5em;
+
 }
 
 h1 {
@@ -43,7 +45,7 @@ header, nav, aside, main {
 /*     border-style: dotted; */
     border-width: 1px;
 }
-header, footer {
+header {
     padding: 1em;
     width: 100%;
 }
