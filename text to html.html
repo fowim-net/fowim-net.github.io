@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text to HTML Converter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        textarea, pre {
+            width: 100%;
+            height: 150px;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Text to HTML Converter</h1>
+    <p>Enter your text below:</p>
+    <textarea id="inputText" placeholder="Enter your text with line breaks..."></textarea>
+    <button onclick="convertText()">Convert</button>
+    <h2>Converted HTML:</h2>
+    <pre id="outputHtml"></pre>
+
+    <script>
+        function convertText() {
+            const inputText = document.getElementById('inputText').value;
+            const lines = inputText.split('\n');
+            let html = '';
+            lines.forEach((line, index) => {
+                if (line.trim() !== '') {
+                    html += `<p>${line}</p>\n`;
+                }
+                if (index < lines.length - 1) {
+                    html += `<br>\n`;
+                }
+            });
+            document.getElementById('outputHtml').textContent = html.trim();
+        }
+    </script>
+</body>
+</html>
