@@ -1,4 +1,4 @@
-  * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -124,6 +124,20 @@ ul{
 .section.active {
     display: block;
 }
+
+.two-column-list {
+    text-align: center;
+    padding: 20px;
+}
+.two-column-list ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Deux colonnes */
+    gap: 15px; /* Espacement entre les colonnes et les lignes */
+    list-style-type: none; /* Supprime les puces */
+    padding: 0;
+    margin: 0;
+}
+
 
 @media screen and (min-width: 768px) {
     body {
