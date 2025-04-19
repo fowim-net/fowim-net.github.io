@@ -10,6 +10,9 @@
     /* src: url(GothicPixels.ttf) format('opentype'); */
 }
 
+body, h1, h2, p, a {
+    filter: blur(0.1px); /* Ajustez la valeur pour plus ou moins de flou */
+}
 body {
     font-family: 'HAN';
     font-size: 13px;
@@ -17,7 +20,7 @@ body {
     flex-direction: column;
     padding: 0.5em;
     background-color: #000000;
-    color: #ffffff;
+    color: #fffbee;
 }
 
 footer {
@@ -37,7 +40,18 @@ h2 {
     font-family: 'HAN';
 }
 
-a {font-size: 12px;}
+a {
+    color: #727272;
+    text-decoration: none;
+    border: 1px solid transparent;
+    padding: 2px 4px;
+    transition: border-color 0.3s, color 0.3s;
+}
+
+a:hover {
+    color: #fffbee;
+    border-color: #fffbee;
+}
 
 header, nav, aside, main {
 /*     background-color: #000000b8; */
@@ -92,11 +106,12 @@ a:visited {
 }
 
 a:hover {
-    color: rgb(255, 200, 0);
+    color: rgb(255, 255, 255);
 }
 
 a:active {
     color: rgb(255, 0, 0);
+    border-color: #ff0000;
 }
 
 ul{
