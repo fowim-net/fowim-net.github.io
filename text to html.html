@@ -18,13 +18,21 @@
             padding: 10px 20px;
             font-size: 16px;
         }
+        .button-container {
+            display: flex; /* Utilise Flexbox pour aligner les boutons */
+            gap: 10px; /* Ajoute un espacement entre les boutons */
+            margin-bottom: 10px; /* Ajoute un espacement sous les boutons */
+        }
     </style>
 </head>
 <body>
     <h1>Text to HTML Converter</h1>
     <p>Enter your text below:</p>
     <textarea id="inputText" placeholder="Enter your text with line breaks..."></textarea>
-    <button onclick="convertText()">Convert</button>
+    <div class="button-container">
+        <button onclick="convertText()">Convert</button>
+        <button onclick="copyToClipboard()">Copier</button>
+    </div>
     <h2>Converted HTML:</h2>
     <pre id="outputHtml"></pre>
 
@@ -42,6 +50,15 @@
                 }
             });
             document.getElementById('outputHtml').textContent = html.trim();
+        }
+
+        function copyToClipboard() {
+            const outputHtml = document.getElementById('outputHtml').textContent;
+            navigator.clipboard.writeText(outputHtml).then(() => {
+                alert('HTML copié dans le presse-papiers !');
+            }).catch(err => {
+                alert('Erreur lors de la copie : ' + err);
+            });
         }
     </script>
 </body>
