@@ -41,13 +41,8 @@
             const inputText = document.getElementById('inputText').value;
             const lines = inputText.split('\n');
             let html = '';
-            lines.forEach((line, index) => {
-                if (line.trim() !== '') {
-                    html += `<p>${line}</p>\n`;
-                }
-                if (index < lines.length - 1) {
-                    html += `<br>\n`;
-                }
+            lines.forEach((line) => {
+                html += `<p>${line.trim()}</p>\n`; // Chaque ligne devient un paragraphe
             });
             document.getElementById('outputHtml').textContent = html.trim();
         }
