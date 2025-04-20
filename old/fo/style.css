@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+body {
+    filter: blur(0.4px); /* Applique un léger flou */
+    background: linear-gradient(180deg, #18008a 0%, #000 70%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+.taskbar{
+    background-color: rgba(55, 0, 0, 0.9);
+    position: absolute; top: 23%;
+    width: 93vw;
+    margin-left: 6%;
+    margin-top: 4px;
+}
+.window {
+    width: 99vw;
+    max-width: 99vw;
+    height: 99vh;
+    max-height: 99vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    z-index: 10;
+    transform: translateZ(0);
+}
+.title-bar {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+}
+.menu-bar {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 5px;
+    font-size: 14px;
+    margin: 1px;
+}
+.menu-bar span {
+    cursor: pointer;
+}
+.main-content{
+    display: flex;
+    height: calc(100% - 56px);
+    overflow-y: hidden;
+}
+.sidebar, .content {
+    padding: -205px;
+    color: white;
+    overflow-y: auto;
+}
+.sidebar {
+    font-size: 0.8em;
+    width: 119px; /* Largeur fixe */
+    min-width: 119px; /* Empêche la réduction en dessous de cette largeur */
+    max-width: 119px; /* Empêche toute extension */
+    height: 50%; /* S'étend sur toute la hauteur */
+    overflow-y: auto; /* Ajoute un défilement interne si le contenu est trop long */
+    overflow-x: hidden; /* Empêche le défilement horizontal */
+    background-color: rgba(0, 0, 0, 0.6);
+    margin: 1px;
+}
+.content {
+    flex-grow: 1;
+    padding: 8px;
+    margin: 1px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.sidebar ul, .content ul {
+    list-style-type: none;
+    padding-left: 10px;
+    display: block; /* Forcer l'affichage en bloc, de haut en bas */
+    margin: 5px 0;  /* Espacement vertical entre les éléments */
+}
+.sidebar li {
+    display: block; /* Forcer l'affichage en bloc, de haut en bas */
+    margin: 5px 0;  /* Espacement vertical entre les éléments */
+}
+.folder {
+    cursor: pointer;
+}
+.folder ul {
+    display: block !important;
+}
+.content {
+    display: none;
+}
+.content.active {
+    display: block;
+}
+
+#por img{
+    width: 9%;
+}
+#por a{
+    white-space: nowrap;
+}
+#dec img{
+    width: 30%;
+}
+#aut img{
+    width: 30%;
+}
+#car img {
+    width: 20%;
+}
+.lightbox {
+    display: none; /* Caché par défaut */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Fond sombre semi-transparent */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Superposé au-dessus des autres éléments */
+}
+
+.lightbox img {
+    max-width: 100%;
+    max-height: 100%;
+}
+h1, p {
+    animation: flicker 2s infinite alternate;
+}
+.layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    will-change: transform;
+    pointer-events: none; /* Empêche l'interaction avec les layers */
+}
+
+/* Arrière-plan profond */
+.layer-1 {
+    background: url('back.png') no-repeat center center;
+    background-size: cover;
+    transform: translateZ(-300px) scale(2);
+}
+
+/* Grille semi-transparente */
+.layer-2 {
+    background: url('grid.png') repeat center;
+    background-size: 200px 200px;
+    transform: translateZ(-100px) scale(1.5);
+    opacity: 0.2;
+}
+
+#boot-sequence {
+    white-space: pre-wrap; /* Pour afficher les sauts de ligne */
+    color: rgb(255, 255, 255);
+    overflow: hidden;
+    font-family: "Courier New", monospace;
+    font-size: 1rem;
+}
+
+#intro {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #1e0079;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    z-index: 10000;
+}
+
+
+@keyframes fadeIn {
+    from {
+        height: 0;
+    }
+    to {
+        height: 100%; /* Laisser tout afficher */
+    }
+}
+a:link {
+    color: rgb(19, 11, 255);
+    transition: color 0.2s, text-shadow 0.2s;
+}
+
+a:visited {
+    color: rgb(19, 171, 255);
+    transition: color 0.2s, text-shadow 0.2s;
+}
+
+a:hover {
+    color: rgb(25, 204, 50);
+}
+
+a:active {
+    color: rgb(255, 0, 0);
+}
+
+/* Styles pour les éléments de la barre latérale */
+.sidebar li {
+    color: rgb(19, 171, 255); /* Couleur par défaut (comme a:link) */
+    transition: color 0.2s, text-shadow 0.2s; /* Transition douce */
+}
+
+.sidebar li:hover {
+    color: rgb(25, 204, 50); /* Couleur au survol (comme a:hover) */
+}
+
+.sidebar li:active {
+    color: rgb(255, 0, 0); /* Couleur quand on clique (comme a:active) */
+}
+
+/* Styles pour le bouton de retour */
+#backButton {
+    margin: 1px;
+    cursor: pointer;
+    font-size: 17px;
+    transition: background-color 0.2s, box-shadow 0.2s; /* Transition douce */
+    color: rgb(19, 171, 255);
+}
+
+#backButton:hover {
+   color: rgb(25, 204, 50); /* Couleur au survol (comme a:hover) */
+}
+
+#backButton:active {
+    color: rgb(255, 0, 0); /* Couleur quand on clique (comme a:active) */
+}
+pre {
+    color: rgb(149, 171, 255);
+}

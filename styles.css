@@ -180,3 +180,20 @@ ul{
     }
 }
 
+/* Animation multicolore */
+@keyframes rainbow {
+    0% { color: red; }
+    20% { color: orange; }
+    40% { color: yellow; }
+    60% { color: green; }
+    80% { color: blue; }
+    100% { color: purple; }
+}
+
+a.multicolor:hover {
+    animation: rainbow 0.2s infinite; /* Change de couleur rapidement */
+    text-decoration: none; /* Supprime le soulignement */
+    border: 1px solid transparent;
+    padding: 2px 4px;
+    transition: border-color 0.3s, color 0.3s;
+}

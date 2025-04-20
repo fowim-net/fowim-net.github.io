@@ -1,0 +1,45 @@
+body {margin: 0; background: rgb(0, 19, 8) url(img/background.png) repeat-y center top;
+     text-align: center;}
+header {margin: 0; background: rgb(0, 4, 12); border-bottom:1px solid #4d2492;}
+footer {margin: 0; background: rgb(0, 4, 12) ; border-top: 1px solid #4d2492;
+    display: flex; flex-direction: row; gap: 20px; justify-content: center;}
+
+a {color: rgb(200, 209, 18);}
+p {color: rgb(140, 255, 127);line-height: 0.1em;}
+h1 {color: rgb(140, 255, 127);}
+
+.menu_index {display: flex; justify-content: center; position: relative;}
+
+.somaire_index {display: flex; flex-direction: row; gap: 7px; justify-content: center; font-size: 20px;}
+
+.manifest {font-size: 12px; display: flex; justify-content: center; 
+    align-items: center; flex-direction: column;}
+
+.lien {display: flex; justify-content: center; flex-wrap: wrap; gap: 5px;}
+
+.galimg {margin: 0; max-width: 20%; padding: 2%;}
+.desimg {margin: 0; max-width: 10%; padding: 2%;}
+.timg {margin: 0; max-width: 75%; padding: 2%;}
+
+.colo_G {color: rgb(142, 95, 159);}
+.colo_W {color: rgb(193, 186, 151);}
+.colo_V {color: rgb(113, 204, 99);}
+.colo_B {color: rgb(100, 108, 226);}
+.colo_J {color: rgb(224, 220, 93);}
+
+
+.planet{display: flex;justify-content: center; flex-direction: row; flex-wrap: wrap; gap: 12px;}
+
+
+.section-content {
+    display: none; /* Cache les sections par défaut */
+}
+
+.section-content.active {
+    display: block; /* Affiche la section active */
+}
+
+/* Padding pour le contenu principal */
+main {
+    padding-top: 60px; /* Pour éviter que le contenu ne soit caché par le menu fixe */
+}
