@@ -21,6 +21,7 @@ body {
     padding: 0.5em;
     background-color: #000000;
     color: #fffbee;
+
 }
 
 footer {
@@ -90,7 +91,6 @@ main {
     max-width: 800px; /* Empêche le contenu d'être trop large */
     display: flex;
     flex-direction: column;
-
 }
 
 
