@@ -18,23 +18,22 @@ body {
     font-size: 13px;
     display: flex;
     flex-direction: column;
-    padding: 0.5em;
+    text-align: center;
     background-color: #000000;
     color: #fffbee;
 
 }
 
 footer {
-    position: fixed; bottom: 0;
     background-color: #00000086;
-    text-align: left;
+    text-align: center;
     padding: 0.5em;
 
 }
 
 h1 {
     font-family: 'HAN';
-    font-size: 99px;
+    font-size: 100px;
 }
 
 h2 {
@@ -62,16 +61,16 @@ header, nav, aside, main {
 }
 header {
     padding: 1em;
-    width: 100%;
+    width: auto;
+    display: flex;
+    justify-content: center;
 }
+
 header img {
     width: 100%;
 }
-header { 
-    gap: 3em;
-    text-align: left;
-    display: flex;
-}
+
+
 nav {
     padding: 0.5em;
     width: 100%;
