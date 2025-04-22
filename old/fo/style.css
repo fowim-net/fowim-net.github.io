@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     }
+    
 body {
     filter: blur(0.4px); /* Applique un léger flou */
     background: linear-gradient(180deg, #18008a 0%, #000 70%);
