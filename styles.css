@@ -24,6 +24,10 @@ body {
 
 }
 
+img{
+    width: 110px;
+}
+
 footer {
     background-color: #00000086;
     text-align: center;
@@ -65,12 +69,6 @@ header {
     display: flex;
     justify-content: center;
 }
-
-header img {
-    width: 100%;
-}
-
-
 nav {
     padding: 0.5em;
     width: 100%;
@@ -91,8 +89,6 @@ main {
     display: flex;
     flex-direction: column;
 }
-
-
 
 a:link {
     color: rgb(85, 85, 85);
