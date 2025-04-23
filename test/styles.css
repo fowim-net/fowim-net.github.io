@@ -4,10 +4,9 @@
     box-sizing: border-box;
 }
 
-@font-face {
+@font-face{
     font-family: 'HAN';
-    src: url(alagard.ttf) format('truetype');
-    
+    src: url(GothicPixels.ttf) format('opentype');
 }
 
 body, h1, h2, p, a {
@@ -15,7 +14,7 @@ body, h1, h2, p, a {
 }
 body {
     font-family: 'HAN';
-    font-size: 13px;
+    font-size: 14px;
     display: flex;
     flex-direction: column;
     text-align: center;
