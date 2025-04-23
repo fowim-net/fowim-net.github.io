@@ -133,6 +133,19 @@ ul{
     margin: 0;
 }
 
+.tree-column-list {
+    text-align: center;
+    padding: 20px;
+}
+.tree-column-list ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Deux colonnes */
+    gap: 5px; /* Espacement entre les colonnes et les lignes */
+    list-style-type: none; /* Supprime les puces */
+    padding: 0;
+    margin: 0;
+}
+
 
 @media screen and (min-width: 768px) {
     body {
