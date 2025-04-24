@@ -4,13 +4,14 @@
     box-sizing: border-box;
 }
 
-@font-face{
+@font-face {
     font-family: 'HAN';
-    src: url(GothicPixels.ttf) format('opentype');
+    src: url(alagard.ttf) format('truetype');
+    
 }
 
 body, h1, h2, p, a {
-    filter: blur(0.1px); /* Ajustez la valeur pour plus ou moins de flou */
+    filter: blur(0.5px); /* Ajustez la valeur pour plus ou moins de flou */
 }
 body {
     font-family: 'HAN';
@@ -18,8 +19,8 @@ body {
     display: flex;
     flex-direction: column;
     text-align: center;
-    background-color: #000000;
-    color: #fffbee;
+    background-color: #fbd6ff;
+    color: #000000;
 
 }
 
@@ -43,17 +44,11 @@ h2 {
     font-family: 'HAN';
 }
 
-a {
-    color: #727272;
-    text-decoration: none;
-    border: 1px solid transparent;
-    padding: 2px 4px;
-    transition: border-color 0.3s, color 0.3s;
-}
+
 
 a:hover {
-    color: #fffbee;
-    border-color: #fffbee;
+    color: #000000;
+    border-color: #000000;
 }
 
 header, nav, aside, main {
@@ -88,19 +83,24 @@ main {
     display: flex;
     flex-direction: column;
 }
-
+a {
+    text-decoration: none;
+    border: 1px solid transparent;
+    padding: 2px 4px;
+    transition: border-color 0.3s, color 0.3s;
+}
 a:link {
-    color: rgb(85, 85, 85);
+    color: rgb(65, 65, 65);
     transition: color 0.2s, text-shadow 0.2s;
 }
 
 a:visited {
-    color: rgb(171, 171, 171);
+    color: rgb(255, 0, 0);
     transition: color 0.2s, text-shadow 0.2s;
 }
 
 a:hover {
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
 }
 
 a:active {

@@ -11,11 +11,11 @@
 }
 
 body, h1, h2, p, a {
-    filter: blur(0.1px); /* Ajustez la valeur pour plus ou moins de flou */
+    filter: blur(0.5px); /* Ajustez la valeur pour plus ou moins de flou */
 }
 body {
     font-family: 'HAN';
-    font-size: 13px;
+    font-size: 14px;
     display: flex;
     flex-direction: column;
     text-align: center;
