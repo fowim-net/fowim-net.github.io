@@ -11,7 +11,11 @@ function showSection(id) {
         const lines = inputText.split('\n');
         let html = '';
         lines.forEach((line) => {
-            html += `<p>${line.trim()}</p>\n`; // Chaque ligne devient un paragraphe
+            if (line.trim() === '') {
+                html += '<br>\n';
+            } else {
+                html += `<p>${line.trim()}</p>\n`;
+            }
         });
         document.getElementById('outputHtml').textContent = html.trim();
     }
@@ -21,3 +25,5 @@ function showSection(id) {
             alert('Erreur lors de la copie : ' + err);
         });
     }
+
+    
