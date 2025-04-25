@@ -107,8 +107,9 @@ a:active {
    ============================= */
 @media screen and (min-width: 1024px) {
     body {
-        max-width: 1200px; /* Limite la largeur du site */
+        max-width: 1200px;
         margin: auto; /* Centre le site */
     }
 }
+
 

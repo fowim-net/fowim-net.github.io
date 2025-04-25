@@ -154,7 +154,6 @@ textarea {
 
 @media screen and (min-width: 768px) {
     body {
-        /* On passe en mode ligne pour les sections principales */
         flex-direction: row;
         flex-wrap: wrap; /* Permet de passer à la ligne si besoin */
         justify-content: center; /* Centre le contenu */
@@ -188,7 +187,7 @@ textarea {
    ============================= */
 @media screen and (min-width: 1024px) {
     body {
-        max-width: 1200px; /* Limite la largeur du site */
+        max-width: 1200px;
         margin: auto; /* Centre le site */
     }
 }
@@ -211,4 +210,3 @@ a.multicolor:hover {
     display: inline-block;
     transition: border-color 0.3s, color 0.3s;
 }
-
