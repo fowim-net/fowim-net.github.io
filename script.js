@@ -3,6 +3,8 @@ function showSection(id) {
         section.style.display = 'none';
     });
     document.getElementById(id).style.display = 'block';
+
+    window.scrollTo(0, 0);
     }
     
 // Fonction pour convertir le texte en HTML
@@ -26,4 +28,3 @@ function showSection(id) {
         });
     }
 
-    
