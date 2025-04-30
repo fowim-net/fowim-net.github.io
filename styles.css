@@ -149,6 +149,7 @@ ul{
 textarea {
     resize: none; /* Désactive le redimensionnement */
     height: 150px; /* Hauteur fixe */
+    
 }
 
 
@@ -209,4 +210,12 @@ a.multicolor:hover {
     padding: 2px 4px;
     display: inline-block;
     transition: border-color 0.3s, color 0.3s;
+}
+
+#outputHtml {
+    white-space: pre-wrap; /* Conserve les retours à la ligne et les espaces */
+    word-wrap: break-word; /* Coupe les mots si nécessaire pour éviter les débordements */
+    font-family: Arial, sans-serif; /* Facultatif : personnalisez la police */
+    padding: 10px; /* Facultatif : ajoutez un peu d'espace autour du texte */
+    background-color: #000000; /* Facultatif : ajoutez un fond pour différencier l'output */
 }
