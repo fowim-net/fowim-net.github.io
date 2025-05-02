@@ -219,3 +219,8 @@ a.multicolor:hover {
     padding: 10px; /* Facultatif : ajoutez un peu d'espace autour du texte */
     background-color: #000000; /* Facultatif : ajoutez un fond pour différencier l'output */
 }
+
+.prog{
+    color: rgb(232, 200, 18);
+    text-align: left;
+}
