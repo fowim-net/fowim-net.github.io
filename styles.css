@@ -126,6 +126,7 @@ ul{
 }
 .two-column-list ul {
     display: grid;
+    font-size: 12px;
     grid-template-columns: repeat(2, 1fr); /* Deux colonnes */
     gap: 7px; /* Espacement entre les colonnes et les lignes */
     list-style-type: none; /* Supprime les puces */
@@ -139,6 +140,7 @@ ul{
 }
 .tree-column-list ul {
     display: grid;
+    font-size: 12px;
     grid-template-columns: repeat(3, 1fr); /* Deux colonnes */
     gap: 5px; /* Espacement entre les colonnes et les lignes */
     list-style-type: none; /* Supprime les puces */
@@ -175,7 +177,7 @@ textarea {
     
     aside {
         flex: 1; /* Prend 1 partie de l'espace */
-        min-width: 200px; /* Pour éviter qu'il devienne trop petit */
+        min-width: 150px; /* Pour éviter qu'il devienne trop petit */
     }
     
     footer {
