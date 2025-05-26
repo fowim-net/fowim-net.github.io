@@ -27,4 +27,3 @@ function showSection(id) {
             alert('Erreur lors de la copie : ' + err);
         });
     }
-
