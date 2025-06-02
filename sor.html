@@ -9,11 +9,9 @@
         <link rel="stylesheet" href="styles.css">
         <link rel="icon" href="IMG/quest.ico" />
     </head>
-<body>
-    <header><a href="index.html" style="border-style: hidden;"><h1>FOWIM</h1></a></header>
+<body class="prog2-body">
+    <header><a href="index.html"><h1>SORCELLERIE!</h1></a></header>
     <nav>
-        <h2>SORCELLERIE!</h2>
-        <br>
         <ul>
             <li><a href="feui.html">Feuille d'Aventure</a></li>
             <li><a href="hist.html">Il etait une fois</a></li>
@@ -21,58 +19,187 @@
         </ul>
         <div>
             <br>
-            <h2>Malédiction et Buff</h2>
-            <textarea placeholder="Malédiction et Buff"></textarea>
+            <h2>Malédiction / Buff</h2>
+            <div class="item-entry">
+                <input type="text" id="curseName" placeholder="Nom">
+                <input type="text" id="curseNote" placeholder="Effet / Détail">
+            </div>
             <br>
-            <div><p>Habileté</p></div>
-            <div><p>Endurance</p></div>
-            <div><p>Chance</p></div>
+            <div class="item-list" id="curseList"></div>
+            <div>
+            <p>Bonus Habileté</p>
+            <button class="decrease" data-key="bonus-skill-hab">−</button>
+            <span class="stat" data-key="bonus-skill-hab" contenteditable="true">0</span>
+            <button class="increase" data-key="bonus-skill-hab">+</button>
+            </div>
+            <div>
+            <p>Bonus Endurance</p>
+            <button class="decrease" data-key="bonus-skill-end">−</button>
+            <span class="stat" data-key="bonus-skill-end" contenteditable="true">0</span>
+            <button class="increase" data-key="bonus-skill-end">+</button>
+            </div>
+            <div>
+            <p>Bonus Chance</p>
+            <button class="decrease" data-key="bonus-skill-cha">−</button>
+            <span class="stat" data-key="bonus-skill-cha" contenteditable="true">0</span>
+            <button class="increase" data-key="bonus-skill-cha">+</button>
+            </div>
             <br>
-            <div><p>Aide de Libra: Disponible/Indisponible</p></div>
+            <div class="toggle-libra">
+            <p>Aide de Libra :</p>
+            <label class="switch">
+                <input type="checkbox" id="libraToggle">
+                <span class="slider"></span>
+            </label>
+            <span id="libraState">Indisponible</span>
+            </div>
             <br>
-            <div><p>Repas</p></div>
-            <div><p>Or</p></div>
-            <div><p>section</p></div>
+            <div>
+            <p>Repas</p>
+            <button class="decrease" data-key="food">−</button>
+            <span class="stat" data-key="food">2</span>
+            <button class="increase" data-key="food">+</button>
+            </div>
+            <div>
+            <p>Or</p>
+            <button class="decrease" data-key="gold">−</button>
+            <span class="stat" data-key="gold">20</span>
+            <button class="increase" data-key="gold">+</button>
+            </div>
+            <div>
+            <p>Section</p>
+            <button class="decrease" data-key="sec">−</button>
+            <span class="stat" data-key="sec">0</span>
+            <button class="increase" data-key="sec">+</button>
+            </div>
+            <div>
+            <div class="item-entry">
             <br>
-            <div><p>Dée</p></div>
-        </div>
-        <div>
+            <h2>Equipement</h2>
+                <input type="text" id="itemName" placeholder="Nom">
+                <input type="number" id="itemQty" placeholder="Quantité">
+                <input type="text" id="itemNote" placeholder="Note">
+            </div>
             <br>
-            <div><h2>Equipment</h2></div>
-            <textarea placeholder="Equipment"></textarea>
-            <div><h2>Objet Magiques</h2></div>
-            <textarea placeholder="Objet Magiques"></textarea>
+            <div class="item-list" id="equipmentList"></div>
+            <h2>Objet magique</h2>
+            <div class="item-entry">
+                <input type="text" id="magicName" placeholder="Nom">
+                <input type="number" id="magicQty" placeholder="Quantité">
+                <input type="text" id="magicNote" placeholder="Note">
+            </div>
             <br>
+            <div class="item-list" id="magicList"></div>
+            <br>
+            <textarea class="note-text" placeholder="Note"></textarea>
         </div>
     </nav>
     <main>
         <div>
-        <a href="index.html" style="border-style: hidden;"><img src="IMG/quest.png"></a>
-        <p>Les vieux héros ne sont plus, mais leur méthode persiste toujours quelque part.</p>
-        <p>L'eau ruisselle le long des corps sanguinolent et vient frapper la terre d'argile.</p>
-        <p>Mémoire de la boue.</p>
-        <br>
+            <a href="index.html" style="border-style: hidden;"><img src="IMG/moon.png"></a>
+            <p>Les vieux héros ne sont plus, mais leur méthode persiste toujours quelque part.</p>
+            <p>L'eau ruisselle le long des corps sanguinolent et vient frapper la terre d'argile.</p>
+            <p>Mémoire de la boue.</p>
+            <br>
         </div>
         <h2>Heros</h2>
         <section class="tree-column-list">
             <ul>
-            <div><p>Habileté</p></div>
-            <div><p>Endurance</p></div>
-            <div><p>Chance</p></div>
+                <il>
+                    <p>Habileté</p>
+                    <button class="decrease" data-key="main-skill-hab">−</button>
+                    <span class="stat" data-key="main-skill-hab" contenteditable="true">0</span>
+                    <button class="increase" data-key="main-skill-hab">+</button>
+                </il>
+                <il>
+                    <p>Endurance</p>
+                    <button class="decrease" data-key="main-skill-end">−</button>
+                    <span class="stat" data-key="main-skill-end" contenteditable="true">0</span>
+                    <button class="increase" data-key="main-skill-end">+</button>
+                </il>
+                <il>
+                    <p>Chance</p>
+                    <button class="decrease" data-key="main-skill-cha">−</button>
+                    <span class="stat" data-key="main-skill-cha" contenteditable="true">0</span>
+                    <button class="increase" data-key="main-skill-cha">+</button>
+                </il>
             </ul>
-        <br>
         </section>
         <h2>Bataille</h2>
         <section class="tree-column-list">
             <ul>
-                <div><h2>Ennemi</h2><p>Habileté</p><p>Endurance</p></div>
-                <div><h2>Ennemi</h2><p>Habileté</p><p>Endurance</p></div>
-                <div><h2>Ennemi</h2><p>Habileté</p><p>Endurance</p></div>
-                <div><h2>Ennemi</h2><p>Habileté</p><p>Endurance</p></div>
-                <div><h2>Ennemi</h2><p>Habileté</p><p>Endurance</p></div>
-                <div><h2>Ennemi</h2><p>Habileté</p><p>Endurance</p></div>
+                <li>
+                    <h2>Ennemi</h2>
+                    <p>Hab</p>
+                    <button class="decrease" data-key="enemy1-skill">−</button>
+                    <span class="stat" data-key="enemy1-skill" contenteditable="true">0</span>
+                    <button class="increase" data-key="enemy1-skill">+</button>
+                    <p>End</p>
+                    <button class="decrease" data-key="enemy1-endurance">−</button>
+                    <span class="stat" data-key="enemy1-endurance" contenteditable="true">0</span>
+                    <button class="increase" data-key="enemy1-endurance">+</button>
+                </li>
+                <li>
+                    <h2>Ennemi</h2>
+                    <p>Hab</p>
+                    <button class="decrease" data-key="enemy2-skill">−</button>
+                    <span class="stat" data-key="enemy2-skill" contenteditable="true">0</span>
+                    <button class="increase" data-key="enemy2-skill">+</button>
+                    <p>End</p>
+                    <button class="decrease" data-key="enemy2-endurance">−</button>
+                    <span class="stat" data-key="enemy2-endurance" contenteditable="true">0</span>
+                    <button class="increase" data-key="enemy2-endurance">+</button>
+                </li>
+                <li>
+                    <h2>Ennemi</h2>
+                    <p>Hab</p>
+                    <button class="decrease" data-key="enemy3-skill">−</button>
+                    <span class="stat" data-key="enemy3-skill" contenteditable="true">0</span>
+                    <button class="increase" data-key="enemy3-skill">+</button>
+                    <p>End</p>
+                    <button class="decrease" data-key="enemy3-endurance">−</button>
+                    <span class="stat" data-key="enemy3-endurance" contenteditable="true">0</span>
+                    <button class="increase" data-key="enemy3-endurance">+</button>
+                </li>
+                <li>
+                    <h2>Ennemi</h2>
+                    <p>Hab</p>
+                    <button class="decrease" data-key="enemy4-skill">−</button>
+                    <span class="stat" data-key="enemy4-skill" contenteditable="true">0</span>
+                    <button class="increase" data-key="enemy4-skill">+</button>
+                    <p>End</p>
+                    <button class="decrease" data-key="enemy4-endurance">−</button>
+                    <span class="stat" data-key="enemy4-endurance" contenteditable="true">0</span>
+                    <button class="increase" data-key="enemy4-endurance">+</button>
+                </li>
+                <li>
+                    <h2>Ennemi</h2>
+                    <p>Hab</p>
+                    <button class="decrease" data-key="enemy5-skill">−</button>
+                    <span class="stat" data-key="enemy5-skill" contenteditable="true">0</span>
+                    <button class="increase" data-key="enemy5-skill">+</button>
+                    <p>End</p>
+                    <button class="decrease" data-key="enemy5-endurance">−</button>
+                    <span class="stat" data-key="enemy5-endurance" contenteditable="true">0</span>
+                    <button class="increase" data-key="enemy5-endurance">+</button>
+                </li>
+                <li>
+                    <h2>Ennemi</h2>
+                    <p>Hab</p>
+                    <button class="decrease" data-key="enemy6-skill">−</button>
+                    <span class="stat" data-key="enemy6-skill" contenteditable="true">0</span>
+                    <button class="increase" data-key="enemy6-skill">+</button>
+                    <p>End</p>
+                    <button class="decrease" data-key="enemy6-endurance">−</button>
+                    <span class="stat" data-key="enemy6-endurance" contenteditable="true">0</span>
+                    <button class="increase" data-key="enemy6-endurance">+</button>
+                </li>
             </ul>
             <br>
+            <div class="dice-block">
+            <button id="rollDice" class="dice-button">Lancer les dés</button>
+            <p id="diceResult">Dé 1 : ? | Dé 2 : ? | Total : ?</p>
+            </div>
         </section>
     </main>
     <aside>
@@ -175,5 +302,7 @@
         <br>
         <p>ZED 7/ Le sortilège le plus puissant ?</p>
     </aside>
+    <script src="script.js">
+    </script>
 </body>
 </html>

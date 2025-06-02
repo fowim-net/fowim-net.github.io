@@ -3,13 +3,11 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 @font-face {
     font-family: 'HAN';
     src: url(alagard.ttf) format('truetype');
     
 }
-
 body, h1, h2, p, a {
     filter: blur(0.4px); /* Ajustez la valeur pour plus ou moins de flou */
 }
@@ -22,28 +20,21 @@ body {
     background-color: #000000;
     color: #fffbee;
 }
-
 img{
     width: 110px;
 }
-
 footer {
     background-color: #00000086;
     text-align: center;
     padding: 0.5em;
-
 }
-
 h1 {
     font-family: 'HAN';
     font-size: 82px;
 }
-
 h2 {
     font-family: 'HAN';
 }
-
-
 header, nav, aside, main {
 /*     background-color: #000000b8; */
     text-align: center;
@@ -62,7 +53,6 @@ nav {
     font-size: 12px;
 }
 aside {
-/*     background-image: url(aside.png); */
     font-size: 0.8em;
     padding: 0.5em;
     width: 100%;
@@ -76,50 +66,42 @@ main {
     display: flex;
     flex-direction: column;
 }
-
 a {
     color: #fffbee;
     text-decoration: none;
     border: 1px solid transparent;
-    padding: 2px 4px;
+    padding: 1px;
     display: inline-block;
     transition: border-color 0.3s, color 0.3s;
 }
-
 a:hover {
     color: #fffbee;
     border-color: #fffbee;
 }
 a:visited {
-    color: rgb(196, 190, 177);
+    color: rgb(255, 255, 255);
     transition: color 0.2s, text-shadow 0.2s;
 }
-
 a:link {
     color: rgb(98, 96, 92);
     transition: color 0.2s, text-shadow 0.2s;
 }
-
 a:hover {
     color: rgb(255, 255, 255);
 }
-
 a:active {
     color: rgb(255, 0, 0);
     border-color: #ff0000;
 }
-
 ul{
     list-style-type: none;
 }
-
 .section {
     display: none;
 }
 .section.active {
     display: block;
 }
-
 .two-column-list {
     text-align: center;
     padding: 20px;
@@ -197,12 +179,14 @@ textarea {
 /* Animation multicolore */
 @keyframes rainbow {
     0% { color: red; }
-    20% { color: orange; }
-    40% { color: yellow; }
-    60% { color: green; }
-    80% { color: blue; }
-    100% { color: purple; }
+    16.6% { color: orange; }
+    33.3% { color: yellow; }
+    50% { color: lime; }
+    66.6% { color: cyan; }
+    83.3% { color: violet; }
+    100% { color: red; } /* boucle vers le début */
 }
+
 
 a.multicolor:hover {
     animation: rainbow 0.2s infinite; /* Change de couleur rapidement */
@@ -222,6 +206,177 @@ a.multicolor:hover {
 }
 
 .prog{
-    color: rgb(232, 200, 18);
+    color: #80f5f5;
     text-align: left;
 }
+/*--SORCELLERIE--*/
+@keyframes sorcellerie {
+    0%   { color: #91b762; }  /* Vert de base - herbe enchantée */
+    15%  { color: #7da34f; }  /* Vert plus terne - forêt sombre */
+    30%  { color: #a6d679; }  /* Vert clair lumineux - lueur magique */
+    45%  { color: #728c4f; }  /* Vert mousseux - vieux grimoire */
+    60%  { color: #c5e99b; }  /* Vert alchimique - potion fraîche */
+    75%  { color: #849e5d; }  /* Vert marécageux - toxicité douce */
+    90%  { color: #91b762; }  /* Retour au vert mystique */
+    100% { color: #91b762; }
+}
+.prog2-body h1, 
+.prog2-body h2, 
+.prog2-body p, 
+.prog2-body a {
+    color: #91b762;
+    text-shadow: 0 10px #41306d51, 0 5px #41306d3a, 0 2px #41306d30, 0 2px #41306d21, 0 1px #41306d0b;
+    animation: sorcellerie 60s infinite;
+    text-decoration: none;
+    transition: border-color 0.3s, color 0.3s;
+}
+.prog2-body a {
+    color: #91b762;
+    text-decoration: none;
+    border: 1px solid transparent;
+    padding: 2px 4px;
+    display: inline-block;
+    transition: border-color 0.3s, color 0.3s
+}
+.prog2-body a:link,
+.prog2-body a:visited {
+    color: #91b762;
+    transition: color 0.2s, text-shadow 0.2s;
+}
+.prog2-body a:hover {
+    color: #91b762;
+    border-color: #91b762;
+}
+.prog2-body a:active {
+    color: rgb(255, 0, 0);
+    border-color: #ff0000;
+}
+/*----*/
+/*--Libra--*/
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 13px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: transparent;
+  transition: .4s;
+  border-radius: 4px;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  left: 3px;
+  bottom: 3px;
+  background-color: #fffbee;
+  transition: .2s;
+  border-radius: 4px;
+}
+input:checked + .slider {
+  background-color: #91b762;
+}
+input:checked + .slider:before {
+  transform: translateX(16px);
+
+}
+/*----*/
+/*--Dée--*/
+.dice-button {
+  padding: 3px 6px;
+  margin: 2px;
+  font-size: 12px;
+  background-color: transparent;
+  color: #91b762;
+  border: 1px solid #91b762;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.dice-button:hover {
+  background-color: transparent;
+}
+/*----*/
+
+/*--ITEM--*/
+.item-entry input {
+  margin: 1px;
+  padding: 1px;
+  background-color: transparent;
+  color: #91b762;
+  border: 1px solid #91b762;
+  border-radius: 4px;
+  width: calc(100% - 10px);
+  font-size: 12px;
+}
+
+.item-list {
+  margin-top: 1px;
+}
+
+.item-block {
+  padding: 1px;
+  border: 1px solid #91b762;
+  border-radius: 4px;
+  margin: 1px;
+  background-color: transparent;
+  color: #91b762;
+  font-size: 12px;
+  cursor: pointer;
+}
+/*--#f58080--*/
+/*--Note--*/
+textarea.note-text {
+    height: 60px;
+    font-size: 12px;
+    padding: 5px;
+    background-color: transparent;
+    border-radius: 4px;
+    border-color: #91b762;;
+}
+/*----*/
+/*--Bouton--*/
+button.increase,
+button.decrease {
+    background-color: transparent;
+    color: #91b762;
+    border: 1px solid #91b762;
+    border-radius: 4px;
+    padding: 1px 5px;
+    margin: 0 4px;
+    font-size: 12px;
+    font-family: 'HAN';
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+button.increase:hover,
+button.decrease:hover {
+    background-color: transparent;
+    border-color: #91b762;
+}
+.stat {
+    display: inline-block;
+    min-width: 24px;
+    border: 1px solid transparent;
+    border-radius: 4px;    
+    animation: sorcellerie 60s ease-in-out infinite;
+}
+.dice-button,
+.item-entry input,
+.item-block,
+textarea.note-text,
+button.increase,
+button.decrease {
+    animation: sorcellerie 60s ease-in-out infinite;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+/*----*/
