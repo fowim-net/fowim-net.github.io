@@ -205,10 +205,6 @@ a.multicolor:hover {
     background-color: #000000; /* Facultatif : ajoutez un fond pour différencier l'output */
 }
 
-.prog{
-    color: #80f5f5;
-    text-align: left;
-}
 /*--SORCELLERIE--*/
 @keyframes sorcellerie {
     0%   { color: #91b762; }  /* Vert de base - herbe enchantée */

@@ -113,3 +113,16 @@ a:active {
 }
 
 
+.dice-button {
+  padding: 3px 6px;
+  margin: 2px;
+  font-size: 12px;
+  background-color: transparent;
+  color: #80f5f5;
+  border: 1px solid #80f5f5;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.dice-button:hover {
+  background-color: transparent;
+}

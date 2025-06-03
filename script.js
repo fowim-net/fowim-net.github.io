@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const die2 = Math.floor(Math.random() * 6) + 1;
         const total = die1 + die2;
 
-        result.textContent = `Dé : ${die1} | Dé : ${die2} | Total : ${total}`;
+        result.textContent = `D Gauche : ${die1} | D Droite : ${die2} | Total : ${total}`;
     });
 });
 
@@ -161,13 +161,7 @@ libraToggle.addEventListener("change", () => {
 });
 
 // Dés
-const rollDiceBtn = document.getElementById("rollDice");
-const diceResult = document.getElementById("diceResult");
-rollDiceBtn.addEventListener("click", () => {
-  const d1 = Math.floor(Math.random() * 6) + 1;
-  const d2 = Math.floor(Math.random() * 6) + 1;
-  diceResult.textContent = `Dé 1 : ${d1} | Dé 2 : ${d2} | Total : ${d1 + d2}`;
-});
+
 // Ajout d'item
 function setupItemInput(nameId, qtyId, noteId, listId) {
   const name = document.getElementById(nameId);
