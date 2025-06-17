@@ -195,82 +195,49 @@
         <br>
         <div>
             <p>#!/bin/bash</p>
-            <p>##test=`whoami`</p>
-            <p>##if [ $test != "root" ]; then</p>
-            <p>##echo "lancer le script en avec sudo"</p>
-            <p>##exit</p>
-            <p>##fi</p>
-            <p>##trap "tput rmcup; exit"  SIGHUP SIGINT SIGTERM</p>
-            <p>##tput smcup</p>
-            <p>##clear</p>
-            <br>
-            <p>sleep 1</p>
-            <p>echo "update"</p>
-            <p>sleep 1</p>
-            <p>apt-get update | apt-get upgrade</p>
-            <p>read -p $</p>
-            <p>echo "_APPUYER_SUR_ENTREE___"</p>
-            <p>while true</p>
-            <p>do</p>
-            <p>echo "     __________    __________________________     "</p>
-            <p>echo "     \______   \  /  |  \______   \__    ___/     "</p>
-            <p>echo "      |    |  _/ /   |  ||       _/ |    |        "</p>
-            <p>echo "      |    |   \/    ^   /    |   \ |    |        "</p>
-            <p>echo "      |______  /\____   ||____|_  / |____|        "</p>
-            <p>echo "             \/      |__|       \/                "</p>
-            <p>echo "        ====+============+============+===        "</p>
-            <p>echo "        |____Menu_______====______B4RT___|        "</p>
-            <p>echo "        APPUYER_SUR_ENTRER_POUR_ACTUALISER        "</p>
-            <p>echo "        ==================================        "</p>
-            <p>echo -e "\n"</p>
-            <p>echo "1"</p>
-            <p>echo "2"</p>
-            <p>echo "0"</p>
-            <p>echo -e "\n"</p>
-            <p>echo -e "           Entrer votre choix \c"</p>
-            <p>read REP</p>
-            <p>clear</p>
-            <br>
-            <p>##case esac</p>
-            <p>case "$REP" in</p>
-            <br>
-            <p>1) ;LOG="/var/log/"</p>
-            <p>LOGDPKG="/var/log"</p>
-            <p>while true</p>
-            <p>do</p>
-            <p>echo "Entrer 1 pour 10_DERNIER_LOG"</p>
-            <p>echo "Entrer 2 pour 10_DERNIER_LOGDPKG"</p>
-            <p>echo -e "\n"</p>
-            <p>echo -e "Entrer votre choix \c"</p>
-            <p>read REP</p>
-            <p>clear</p>
-            <p>case "$REP" in</p>
-            <p>1) tail -n 10 $LOG && read -p $ && clear ;;</p>
-            <br>
-            <p>2) tail -n 10 $LOGDPKG && read -p $ && clear ;;</p>
-            <p>esac</p>
-            <p>done</p>
-            <p>clear;</p>
-            <p>2) ;IMG_M="/home/user/Images"</p>
-            <p>DOC_Y="/home/user/Documents"</p>
-            <p>MUS_C="/home/user/Musique"</p>
-            <p>VID_O="/home/user/Vidéos"</p>
-            <p>sleep 1</p>
-            <p>echo "_APPUYER_SUR_ENTREE___"</p>
-            <p>read -p $</p>
-            <p>cd /home/user/Téléchargements</p>
-            <p>mv *.png *jpeg *.jpg *.gif *.tif $IMG_M</p>
-            <p>mv *.deb *.txt *.pdf *.zip *.docx *.iso *.rar $DOC_Y</p>
-            <p>mv *.mp3 *.wav $MUS_C</p>
-            <p>mv *.mp4 *.avi $VID_O</p>
-            <p>echo "_B4RT_vous_dit_merci_"</p>
-            <p>read -p $</p>
-            <p>clear;</p>
-            <p>0) exit ;;</p>
-            <p>esac</p>
-            <p>done</p>
-            <br>
-            <br>
+<p>test=`whoami`</p>
+<p>if [ $test != "root" ]; then</p>
+<p>echo "lancer le script en avec sudo"</p>
+<p>exit</p>
+<p>fi</p>
+<p>trap "tput rmcup; exit" SIGHUP SIGINT SIGTERM</p>
+<p>tput smcup</p>
+<p>clear</p>
+<p>sleep 1</p>
+<p>echo "update"</p>
+<p>sleep 1</p>
+<p>dnf update -y</p>
+<p>sleep 1</p>
+<p>echo " ====+============+============+=== "</p>
+<p>echo ""</p>
+<p>echo " |____Menu_______====______B4RT___| "</p>
+<p>echo ""</p>
+<p>echo " APPUYER_SUR_ENTRER_POUR_ACTUALISER "</p>
+<p>echo ""</p>
+<p>echo " ================================== "</p>
+<p>read -p $</p>
+<p>LOG="/var/log/"</p>
+<p>LOGDPKG="/var/log"</p>
+<p>tail -n 10 $LOG && read -p $ && clear</p>
+<p>tail -n 10 $LOGDPKG && read -p $ && clear</p>
+<p>clear</p>
+<p>IMG_M="/home/loot/Images"</p>
+<p>DOC_Y="/home/loot/Documents"</p>
+<p>MUS_C="/home/loot/Musique"</p>
+<p>VID_O="/home/loot/Vidéos"</p>
+<p>sleep 1</p>
+<p>echo "_APPUYER_SUR_ENTREE___"</p>
+<p>read -p $</p>
+<p>cd /home/loot/Téléchargements</p>
+<p>mv *.png *jpeg *.jpg *.gif *.tif $IMG_M</p>
+<p>mv *.deb *.txt *.pdf *.zip *.docx *.iso *.rar *.torrent *.odt $DOC_Y</p>
+<p>mv *.mp3 *.wav $MUS_C</p>
+<p>mv *.mp4 *.avi $VID_O</p>
+<p>echo "_B4RT_vous_dit_merci_"</p>
+<p>read -p $</p>
+<p>clear</p>
+<p>exit</p>
+<br>
         </div>
         <a href="index.html" style="border-style: hidden;"><img src="IMG/chat_bet.png" style="width: 350px;"></a>
         <p>Commin n'est-t-il pas ?</p>
