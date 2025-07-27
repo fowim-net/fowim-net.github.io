@@ -6,35 +6,68 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Fowim</title>
         <meta name="description" content="">
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="css/styles.css">
         <link rel="icon" href="IMG/quest.ico" />
     </head>
     <body>
         <main>
-        <a href="index.html" style="border-style: hidden;"><h1>FOWIM</h1></a>
-        <div>
-            <br>
-            <h2>XELCOME TO FOWIM</h2>
-            <br>
+        <div id="menu" class="section active">
+            <a href="index.html" style="border-style: hidden;"><h1>FOWIM</h1></a>
             <div>
-                <p>Après des années à errer dans la poussière, respirant les vapeurs de soufre.</p> 
-                <p>Derier chaque dune de chaque desert, se trouve la naissance de la prochaine.</p> 
-                <p>Vos pas, cosaliter ne font que accélérer les choses. Laissez tomber, abandonnez-vous dans les dédales de notes.</p>
                 <br>
-                <p>Fowim.</p> 
+                <h2>XELCOME TO FOWIM</h2>
                 <br>
-                <a href="test/test4.html" style="border-style: hidden;"><img src="IMG/quest.png" style="width: 110px;"></a>
+                <div>
+                    <p>Après des années à errer dans la poussière, respirant les vapeurs de soufre.</p>
+                    <p>Derier chaque dune de chaque desert, se trouve la naissance de la prochaine.</p>
+                    <p>Vos pas, cosaliter ne font que accélérer les choses. Laissez tomber, abandonnez-vous dans les dédales de notes.</p>
+                    <br>
+                    <p>Fowim.</p>
+                    <br>
+                    <a href="test/test4.html" style="border-style: hidden;"><img src="IMG/quest.png" style="width: 110px;"></a>
+                </div>
+                <br>
             </div>
+            <ul>
+                <li><a href="feui.html">Feuille d'Aventure</a></li>
+                <li><a href="hist.html">Il etait une fois</a></li>
+                <li><a href="sid.html">Side Quest</a></li>
+            </ul>
+        </div>
+        <div id="con" class="section">
+            <a href="index.html" style="border-style: hidden;"><img src="IMG/moon.png"></a>
+            <ul>
+                <li><a onclick="showSection('Moi')">██████████</a></li>
+                <li><a onclick="showSection('Dai')">Dadaiii</a></li>
+            </ul>
+            <a href="index.html" style="border-style: hidden;"><img src="IMG/moon.png"></a>
+        </div>
+        <div id="Moi" class="section">
+            <br>
+            <a href="https://github.com/fowim-net" style="border-style: hidden;"><img src="IMG/batcher.png"></a>
+            <br>
+            <h2>██████████</h2>
+            <br>
+            <a href="https://github.com/fowim-net">https://github.com/fowim-net</a>
+            <p>fowim.net@gmail.com</p>
+        </div>
+        <div id="Dai" class="section">
+            <br>
+            <a href="https://elisalane.com/" style="border-style: hidden;"><img src="IMG/dadaiii.png"></a>
+            <br>
+            <h2>DADAIII</h2>
+            <br>
+            <p>Oiseau de malheur, jetez vos mauvaises augures, le retour du fossile démesuré est enfin venu, 9ᵉ fille du comte du Sud, son nom fut invoqué, enfant du métal aspirant du chrom.</p>
+            <p>Il est temps de sortir vos chaînes et de tirer le dracar titanesque, acclamez votre bourreau.</p>
+            <br>
+            <p>Demoiselle désinvolte, Dame des dunes. Date des dalles et donne des tuiles. Tuiles de damier ou toiture.  Trois, pour être plus précis. Da Da Iii.</p>
+            <br>
+            <p><a href="https://elisalane.com/">https://elisalane.com/</a></p>
             <br>
         </div>
-        <ul>
-            <li><a href="feui.html">Feuille d'Aventure</a></li>
-            <li><a href="hist.html">Il etait une fois</a></li>
-            <li><a href="sid.html">Side Quest</a></li>
-        </ul>
         <img src="IMG/king!.png" style="width: 200px;">
     </main>
-    <footer><a href="Contact.html">Contact</a></footer>
+    <footer><a onclick="showSection('con')">Contact</a></footer>
     <script src="script.js"></script>
     </body>
 </html>

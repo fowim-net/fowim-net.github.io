@@ -47,6 +47,7 @@ main {
 }
 a {
     text-decoration: none;
+        color: #fffbee;
     border: 1px solid transparent;
     padding: 2px 4px;
     display: inline-block;
@@ -72,6 +73,13 @@ a:visited {
 a:active {
     color: rgb(255, 0, 0);
     border-color: #ff0000;
+}
+
+.section {
+    display: none;
+}
+.section.active {
+    display: block;
 }
 
 .tree-column-list {

@@ -6,36 +6,360 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Fowim</title>
         <meta name="description" content="">
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="css/styles.css">
         <link rel="icon" href="IMG/quest.ico" />
     </head>
     <body>      
         <header><a href="index.html" style="border-style: hidden;"><h1>FOWIM</h1></a></header>
         <nav>
-<h2>XELCOME TO FOWIM</h2>
-<br>
-    <ul>
-        <li><a href="feui.html">Feuille d'Aventure</a></li>
-        <li><a href="hist.html">Il etait une fois</a></li>
-        <li><a href="sid.html">Side Quest</a></li>
-    </ul>
+        <h2>XELCOME TO FOWIM</h2>
+        <br>
+        <ul>
+            <li><a href="feui.html">Feuille d'Aventure</a></li>
+            <li><a href="hist.html">Il etait une fois</a></li>
+            <li><a href="sid.html">Side Quest</a></li>
+        </ul>
         </nav>
         <main>
-            <div id="sec2" class="section active">
-                <a href="index.html" style="border-style: hidden;"><img src="IMG/quest.png"></a>
+            <div id="menu" class="section active">
+                <a href="index.html" style="border-style: hidden;"><img src="IMG/moon.png"></a>
                 <h2>Side Quest</h2>
                 <br>
                 <p>Parmi les nombreuses embûches, trop de questions peuvent rester en suspens. Revenir dessus est pire que la plus chaude des aiguilles sous votre pied. Pouvons-nous trouver du plaisir dans la douleur temporaire ?</p>
                 <br>
                 <ul>
-                    <li><a href="vestiaire.html">le Vestiaire</a></li>
-                    <li><a href="usine.html">l'Usine</a></li>
-                    <li><a href="camelote.html">Camelote</a></li>
+                    <li><a onclick="showSection('vet')">le Vestiaire</a></li>
+                    <li><a onclick="showSection('usi')">l'Usine</a></li>
+                    <li><a onclick="showSection('cam')">Camelote</a></li>
                     <!-- <li><a href="sor.html">Sorcellerie!</a></li> -->
                 </ul>
             </div>
+            <div id="vet" class="section">
+                <a href="sid.html" style="border-style: hidden;"><img src="IMG/moon.png"></a>
+                <h2 >NO_LAYER_SET_</h2>
+                <h2 style="font-size: 13px;">PLEASE_BE_COOL_AND_ADD_NO_STUFF</h2>
+                <br>
+                <p>Etoffe, tissu, masques de cher qui gratte et brûle les peaux, cachent les mites et les bouts de terre des champs et petits calouxs.</p>
+                <p>Si les cadavres de souris ne sentaient pas si bon dans ma poche, peut-être que je t'aurais déjà lavé de toute odeur.</p>
+                <br>
+                <ul>
+                    <li><a href="old/fo/fowim_arg.html" class="multicolor">OLD FOWIM</a></li>
+                    <li><a href="old/ba/index.html" class="multicolor">OLD BYBATCHER</a></li>
+                </ul>
+            </div>
+            <div id="usi" class="section">
+                <a href="sid.html" style="border-style: hidden;"><img src="IMG/moon.png"></a>
+                <br>
+                <p>Du métal, du métal, encore du métal partout, le bruit du métal.</p>
+                <p>Le son du métal qui gronde au-dessus des têtes ignorantes. Le son des machines apaise comme votre mère.</p>
+                <p>Votre mère n'était pas faite de métal pourtant.</p>
+                <p>Écoutez vos os une dernière fois, acclamez le métal.</p>
+                <br>
+                <section class="two-column-list">
+                    <ul>
+                        <li><a onclick="showSection('01')">Élément 1 : Think pad t420 Bios by pass</a></li>
+                        <li><a onclick="showSection('02')">Élément 2 : Olivetti lexikon 82 ouverture</a></li>
+                        <li><a onclick="showSection('03')">Élément 3 : Tronxi x5s reparation, calibration sur BTT SKR V1.4</a></li>
+                        <li><a onclick="showSection('04')">Élément 4 : Ordi-nosaure Toshiba Satellite 110cs</a></li>
+                    </ul>
+                    <br>
+                </section>
+            </div>
+                <div id="01" class="section"><a onclick="showSection('usi')" style="border-style: hidden;"><img src="IMG/moon.png"></a><h2>Élément 1 : Think pad t420 Bios by pass</h2></div>
+                <div id="02" class="section"><a onclick="showSection('usi')" style="border-style: hidden;"><img src="IMG/moon.png"></a><h2>Élément 2 : Olivetti lexikon 82 ouverture</h2></div>
+                <div id="03" class="section"><a onclick="showSection('usi')" style="border-style: hidden;"><img src="IMG/moon.png"></a><h2>Élément 3 : Tronxi x5s reparation, calibration sur BTT SKR V1.4</h2></div>
+                <div id="04" class="section"><h2>Élément 4 : Ordinosaure Toshiba Satellite 110cs</h2>
+                    <a onclick="showSection('usi')" style="border-style: hidden;"><img src="IMG/war.png" style="width: 200px;"></a>
+                    <p>Incarne le guerrier sans remords. La victoire demande sacrifice, rien de plus. Du sang d'autrui ruisselle en abondance, bois le sang d'autrui, nourris-toi de sa progéniture. Le Chrom est venu du ciel pour les punir, tous ceux qui trainent loin du peuple monastique. Incarne le guerrier sans remords, sois l’instrument de la justice céleste.</p>
+                </div>
+            <div id="cam" class="section">
+                <div>
+                <a href="sid.html" style="border-style: hidden;"><img src="IMG/moon.png"></a>
+                <br>
+                <p>Barbare à l’épée brisée, prolifère la parole barbare, écrase les pensées passagères, crois en la vérité unique. </p>
+                <p>Seuls les plus braves d'entre nous seront appelés à dévorer leur récompense avec joie.</p>
+                <p>La bataille arrive à grands pas. Les souverains du métal nous demandent servitude.</p>
+                <p>Nous mourons dans la barbarie.</p>
+                <br>
+                <h2>LINUX SHELL</h2>
+                <p>ctrl + alt + t : [Terminal]</p>
+                <br>
+                <p>history : [Historique des commandes]</p>
+                <p>clear : [Nettoyer le terminal]</p>
+                <p>alias : [Alias de commande]</p>
+                <br>
+                <p>sudo : [Droit administrateur]</p>
+                <p>cd : [Changer de repertoire]</p>
+                <p>pwd : [Affiche le repertoire actuel]</p>
+                <p>ls /ls -la /ls -ls : [liste les element du repertoire]</p>
+                <p>cp : [copy]</p>
+                <p>mv : [move]</p>
+                <p>rm /rm -r : [remove]</p>
+                <p>cat : [concatenate]</p>
+                <br>
+                <p>touch fichier.txt : créer un "fichier.txt"</p>
+                <p>mkdir mon_dossier : créer un dossier "mon-dossier"</p>
+                <p>rmdir mon_dossier : supprimer "mon_dossier"</p>
+                <p>file fichier.txt : voir type du fichier fichier.txt</p>
+                <p>head -n 10 fichier.txt : 10 premières lignes fichier.txt</p>
+                <p>tail -n 10 fichier.txt : 10 dernières lignes fichier.txt</p>
+                <p>nano : [Edit files]</p>
+                <br>
+                <p>ps aux : [tasklist]</p>
+                <p>top : [tasklist]</p>
+                <p>kill "PID" : [kill task]</p>
+                <br>
+                <p>curl : [client URL]</p>
+                <p>ifconfig : [interface config]</p>
+                <br>
+                <h2>Fedora</h2>
+                <p>sudo dnf install vlc : Installer un logiciel</p>
+                <p>sudo dnf remove vlc : Supprimer un logiciel</p>
+                <p>sudo dnf update : Mettre à jour le système</p>
+                <p>sudo dnf search firefox : Rechercher un paquet</p>
+                <p>sudo dnf autoremove : Supprimer les paquets inutiles</p>
+                <p>sudo dnf history : Historique d'installation</p>
+                <p>sudo dnf history undo "ID" : Annule une installation</p>
+                <br>
+                <h2>LINUX</h2>
+                <p>ctrl + shift + c : [copier]</p>
+                <p>ctrl + shift + v : [coller]</p>
+                <br>
+                <h2>LINUX MAGIC COMMAND</h2>
+                <p>sudo find / -type f -iname "*truc"</p>
+                <p>sudo find / -iname "*"</p>
+                <br>
+                <h2>WIN CMD</h2>
+                <p>ipconfig : [Internet Protocol configuration]</p>
+                <p>netstat -ano : [network statistics]</p>
+                <p>tasklist /tasklist /v : [tasklist]</p>
+                <br>
+                <h2>WINDOWS</h2>
+                <p>ctrl x : [couper]</p>
+                <p>ctrl c : [copier]</p>
+                <p>ctrl v : [coller]</p>
+                <br>
+                <p>win E : [explorateur de fichier]</p>
+                <br>
+                <p>win D : [retour bureau]</p>
+                <p>ctrl win D : [nv bureau]</p>
+                <p>ctrl win ‹-  -› : [changer de bureau]</p>
+                <p>ctrl win shift B : [reset graphics]</p>
+                <br>
+                <h2>FIREFOX</h2>
+                <p>ctrl + t : [nv onglet]</p>
+                <p>shift + echap : [gestionnaire de processus]</p>
+                <br>
+                <h2>V̶S̶ ̶C̶O̶D̶E̶</h2>
+                <p>c̶t̶r̶l̶ ̶+̶ ̶D̶ ̶:̶[̶s̶e̶l̶e̶c̶t̶i̶o̶n̶ ̶m̶e̶m̶e̶ ̶c̶a̶r̶a̶c̶t̶e̶r̶]̶</p>
+                <p>s̶h̶i̶f̶t̶ ̶+̶ ̶a̶l̶t̶ ̶+̶ ̶A̶ ̶:̶ ̶[̶s̶e̶l̶e̶c̶t̶i̶o̶n̶ ̶v̶e̶r̶e̶ ̶c̶o̶m̶m̶e̶n̶t̶a̶i̶r̶e̶]</p>
+                <h2>V̶S̶ ̶C̶O̶D̶I̶U̶M̶</h2>
+                <p>c̶t̶r̶l̶ ̶+̶ ̶s̶h̶i̶f̶t̶ ̶+̶ ̶A̶ ̶:̶ ̶[̶s̶e̶l̶e̶c̶t̶i̶o̶n̶ ̶v̶e̶r̶e̶ ̶c̶o̶m̶m̶e̶n̶t̶a̶i̶r̶e̶]</p>
+                <br>
+                <h2>Kate (IDE)</h2>
+                <p>shift + D : [selection vere commentaire]</p>
+            </div>
+            <div>
+                <br>
+                <br>
+                <a href="sid.html" style="border-style: hidden;"><img src="IMG/moon.png"></a>
+                <p>Le rapport s'agrandit. De jour en jour, sortant bientôt presque des portes de la ville de Kelmejnn.</p>
+                <p>les Souverini se jettent les un sur les autres pour ajouter leur nom. Au doux comme vénérable. </p>
+                <p>Tous se retrouvent la bave au lèvre comme des cabots pleins de puces qui entendent l’appel de maman.</p>
+                <br>
+                <h2>Nom</h2>
+                <p>Nouveaux-men</p>
+                <p>Habituer-add</p>
+                <p>Exclu-naz</p>
+                <br>
+                <h2>Mots</h2>
+                <p>South-side -- suicide</p>
+                <br>
+                <h2>Team</h2>
+                <p>Linux-Kinder</p>
+                <p>Microsoft-Cosmos</p>
+                <p>Appel-Jim</p>
+                <br>
+                <h2>Marque</h2>
+                <p>Google-Licose</p>
+                <p>Amazone-Nil</p>
+                <p>SpacX-RATP</p>
+                <p>Tesla-Ceasar</p>
+                <p>Disney-RAT ROD</p>
+                <p>Sony-Peter</p>
+                <p>Sinopec-ADR</p>
+                <p>Orano-BH</p>
+                <p>Samsung-C4</p>
+                <p>IBM-Pro</p>
+                <p>LV-Rolex</p>
+                <p>Rolex-LV</p>
+                <p>DELL-Windo</p>
+                <p>Facebook-E.S</p>
+                <p>Nasa-Sky Fall</p>
+                <p>Foxconn-Pere noel</p>
+                <br>
+                <h2>Politique</h2>
+                <p>Macron-Le REQUIN</p>
+                <p>Le Pen-Tipiac</p>
+                <p>Sarko-Estrad</p>
+                <p>Hollande-Scoot</p>
+                <br>
+                <p>Obama-Ské</p>
+                <p>Trump-Tulipe</p>
+                <p>Bush-WC</p>
+                <br>
+                <p>Poutine-Kanada</p>
+                <p>Staline-Zaria</p>
+                <br>
+                <p>Adolf-Adidas</p>
+                <br>
+                <p>Ousama-MisterBin</p>
+                <br>
+                <h2>FAMOUSS</h2>
+                <p>Mark Zuckerberg-Terminator</p>
+                <p>Jeff Bezos-Pesos</p>
+                <p>Elon musk-Sammy</p>
+                <p>Bill Gates-Gros Portail</p>
+                <p>Steve Jobs-Blowjobs</p>
+                <br>
+            </div>
+            <div>
+                <a href="sid.html" style="border-style: hidden;"><img src="IMG/moon.png"></a>
+                <p>Pour retrenscrire ça au roi de métal, les arcanistes du ciel donnèrent aux hommes la machine. Maintenant, aucun retour arrière n'était possible.</p>
+                <p>Les hommes furent gravés un à un. </p>
+                <br>
+                <h1 style="font-size: 20px;">Text to HTML Converter<p style="font-size: 10px;">by Dadaiii</p></h1>
+                <p>Enter your text below:</p>
+                <br>
+                <textarea id="inputText" placeholder="../sor.html"></textarea>
+                <div class="button-container">
+                    <button onclick="convertText()">Convert</button>
+                    <button onclick="copyToClipboard()">Copier</button>
+                    <div><h2>Converted HTML:</h2></div>
+                    <div id="outputHtml"></div>
+                </div>
+            </div>
+            <div>
+                <a href="sid.html" style="border-style: hidden;"><img src="IMG/moon.png"></a>
+                <p>Manier les machines  !</p>
+                <p>La domination sur le métal ou la mort des hommes</p>
+                <p>Cela se transforma en un engagement acharné envers les connaissances interdites.</p>
+                <p>Au plus nous frappons le métal de toutes nos forces, au plus nous lui donnons une forme qui nous surpasse.</p>
+                <p>Est-ce que l'Armée des morts est sur nos terres  ?</p>
+                <br>
+                <p>Est donc ça un ennemi qui ne meurt jamais  ?</p>
+                <br>
+                <div>
+                    <p>#!/bin/bash</p>
+                    <p>test=`whoami`</p>
+                    <p>if [ $test != "root" ]; then</p>
+                    <p>echo "lancer le script en avec sudo"</p>
+                    <p>exit</p>
+                    <p>fi</p>
+                    <p>trap "tput rmcup; exit" SIGHUP SIGINT SIGTERM</p>
+                    <p>tput smcup</p>
+                    <p>clear</p>
+                    <p>sleep 1</p>
+                    <p>echo "update"</p>
+                    <p>sleep 1</p>
+                    <p>dnf update -y</p>
+                    <p>sleep 1</p>
+                    <p>echo " ====+============+============+=== "</p>
+                    <p>echo ""</p>
+                    <p>echo " |____Menu_______====______B4RT___| "</p>
+                    <p>echo ""</p>
+                    <p>echo " APPUYER_SUR_ENTRER_POUR_ACTUALISER "</p>
+                    <p>echo ""</p>
+                    <p>echo " ================================== "</p>
+                    <p>read -p $</p>
+                    <p>LOG="/var/log/"</p>
+                    <p>LOGDPKG="/var/log"</p>
+                    <p>tail -n 10 $LOG && read -p $ && clear</p>
+                    <p>tail -n 10 $LOGDPKG && read -p $ && clear</p>
+                    <p>clear</p>
+                    <p>IMG_M="/home/loot/Images"</p>
+                    <p>DOC_Y="/home/loot/Documents"</p>
+                    <p>MUS_C="/home/loot/Musique"</p>
+                    <p>VID_O="/home/loot/Vidéos"</p>
+                    <p>sleep 1</p>
+                    <p>echo "_APPUYER_SUR_ENTREE___"</p>
+                    <p>read -p $</p>
+                    <p>cd /home/loot/Téléchargements</p>
+                    <p>mv *.png *jpeg *.jpg *.gif *.tif $IMG_M</p>
+                    <p>mv *.deb *.txt *.pdf *.zip *.docx *.iso *.rar *.torrent *.odt $DOC_Y</p>
+                    <p>mv *.mp3 *.wav $MUS_C</p>
+                    <p>mv *.mp4 *.avi $VID_O</p>
+                    <p>echo "_B4RT_vous_dit_merci_"</p>
+                    <p>read -p $</p>
+                    <p>clear</p>
+                    <p>exit</p>
+                    <br>
+                </div>
+                <a href="index.html" style="border-style: hidden;"><img src="IMG/chat_bet.png" style="width: 350px;"></a>
+                <p>Commin n'est-t-il pas ?</p>
+                </div>
+            </div>
         </main>
-        <aside><img src="IMG/Boufon.png" style="width: 200px;"></aside>
+        <aside>
+            <img src="IMG/Boufon.png" style="width: 200px;">
+            <ul>
+                <li> ~LES COPAIN~ </li>
+                <li> <a href="https://dadaiii.github.io/">https://dadaiii.github.io/</a> </li>
+                <li> ~Mes Site Fav~ </li>
+                <li> <a href="https://www.graffiti.org/index.html">https://www.graffiti.org/index.html</a> </li>
+                <li> <a href="https://www.hackthissite.org/">https://www.hackthissite.org/</a> </li>
+                <li> <a href="http://www.realmonstrosities.com/">http://www.realmonstrosities.com/</a> </li>
+                <li> <a href="https://5ktoys.com/">https://5ktoys.com/</a> </li>
+                <li> <a href="https://temp-mail.org/">https://temp-mail.org/</a> </li>
+                <li> <a href="https://radio.garden/visit/st-jean-de-vedas/TA-odLE_">https://radio.garden/visit/st-jean-de-vedas/TA-odLE_</a></li>
+                <li> <a href="https://ytmp3.nu/UKY/">https://ytmp3.nu/UKY/</a> </li>
+                <li> <a href="https://anime-sama.fr/">https://anime-sama.fr/</a> </li>
+                <li> <a href="https://vimm.net/">https://vimm.net/</a> </li>
+                <li> <a href="https://www.lookmovie2.to/">https://www.lookmovie2.to/</a> </li>
+                <li> ~Site Randome~ </li>
+                <li> <a href="https://www.random.org/">https://www.random.org/</a> </li>
+                <li> <a href="https://coryarcangel.com/">https://coryarcangel.com/</a> </li>
+                <li> <a href="https://kanoguti93.neocities.org/main_page/">https://kanoguti93.neocities.org/main_page/</a>  </li>
+                <li> <a href="https://petittube.com/">https://petittube.com/</a></li>
+                <li> <a href="https://sound-effects.bbcrewind.co.uk/">https://sound-effects.bbcrewind.co.uk/</a> </li>
+                <li> <a href="https://theskylive.com/">https://theskylive.com/</a></li>
+                <li> ~Software et truc utille~ </li>
+                <li> <a href="https://temp-mail.org/">https://temp-mail.org/</a> </li>
+                <li> <a href="https://whoislookup.pro/about_whois">https://whoislookup.pro/about_whois</a> </li>
+                <li> <a href="https://www.ffdn.org/fr">https://www.ffdn.org/fr</a> </li>
+                <li> <a href="https://www.epicbrowser.com/">https://www.epicbrowser.com/</a> </li>
+                <li> <a href="https://tails.boum.org/">https://tails.boum.org/</a> </li>
+                <li> <a href="https://openboardview.org/">https://openboardview.org/</a> </li>
+                <li> <a href="https://unshort.site/_about">https://unshort.site/_about</a> </li>
+                <li> <a href="https://telecharger-videos.com/dailymotion#url=https://www.dailymotion.com/video/xf7siu">https://telecharger-videos.com/dailymotion#url=https://www.dailymotion.com/video/xf7siu</a> </li>
+                <li> <a href="https://ytmp3.nu/UKY/">https://ytmp3.nu/UKY/</a> </li>
+                <li> <a href="https://www.swisstransfer.com/fr-fr">https://www.swisstransfer.com/fr-fr</a> </li>
+                <li> ~Securiter en linge~ </li>
+                <li> <a href="https://epieos.com/">https://epieos.com/</a> </li>
+                <li> <a href="https://haveibeenpwned.com/">https://haveibeenpwned.com/</a> </li>
+                <li> <a href="https://backgroundchecks.org/justdeleteme/fr.html">https://backgroundchecks.org/justdeleteme/fr.html</a> </li>
+                <li> ~Tuto informatique et forum~ </li>
+                <li> <a href="https://www.malekal.com/">https://www.malekal.com/</a> </li>
+                <li> <a href="https://www.shouldiremoveit.com/programs.aspx">https://www.shouldiremoveit.com/programs.aspx</a> </li>
+                <li> <a href="https://fr.m.wikibooks.org/wiki/Débutez_dans_IRC/Qu'est-ce_qu'IRC_%3F">https://fr.m.wikibooks.org/wiki/Débutez_dans_IRC/Qu'est-ce_qu'IRC_%3F</a> </li>
+                <li> ~Media site d'information et autre~ </li>
+                <li> <a href="https://basta.media/">https://basta.media/</a> </li>
+                <li> <a href="https://www.laquadrature.net/">https://www.laquadrature.net/</a> </li>
+                <li> <a href="https://wikileaks.org/">https://wikileaks.org/</a> </li>
+                <li> <a href="https://www.interpol.int/fr">https://www.interpol.int/fr</a> </li>
+                <li> <a href="https://www.europol.europa.eu/">https://www.europol.europa.eu/</a> </li>
+                <li> <a href="https://archive.org/">https://archive.org/</a> </li>
+                <li> ~Site pour le graphisme~ </li>
+                <li> <a href="https://www.dafont.com/fr/">https://www.dafont.com/fr/</a> </li>
+                <li> <a href="https://fr.fonts2u.com/">https://fr.fonts2u.com/</a> </li>
+                <li> ~Vieux pc~ </li>
+                <li> <a href="http://pc-museum.com/officewing.htm">http://pc-museum.com/officewing.htm</a> </li>
+                <li> <a href="https://psref.lenovo.com/syspool/Sys/i_pdf/ThinkPad_EMEA.pdf">https://psref.lenovo.com/syspool/Sys/i_pdf/ThinkPad_EMEA.pdf</a> </li>
+                <li> <a href="https://www.wikiwand.com/en/ThinkPad">https://www.wikiwand.com/en/ThinkPad</a> </li>
+                <li> <a href="https://forum.hardware.fr/hfr/OrdinateursPortables/portable/lenovo-thinkpad-sujet_25020_1.htm">https://forum.hardware.fr/hfr/OrdinateursPortables/portable/lenovo-thinkpad-sujet_25020_1.htm</a> </li>
+                <li> <a href="https://www.youtube.com/c/ThisDoesNotCompute">https://www.youtube.com/c/ThisDoesNotCompute</a> </li>
+            </ul>
+        </aside>
         <script src="script.js"></script>
     </body>
 </html>

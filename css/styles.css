@@ -5,7 +5,7 @@
 }
 @font-face {
     font-family: 'HAN';
-    src: url(alagard.ttf) format('truetype');
+    src: url(../fon/alagard.ttf) format('truetype');
     
 }
 body, h1, h2, p, a {
@@ -67,10 +67,11 @@ main {
     flex-direction: column;
 }
 a {
+    border-style: hidden;
     color: #fffbee;
     text-decoration: none;
     border: 1px solid transparent;
-    padding: 1px;
+    padding: 1.5px;
     display: inline-block;
     transition: border-color 0.3s, color 0.3s;
 }
@@ -142,25 +143,20 @@ textarea {
         flex-wrap: wrap; /* Permet de passer à la ligne si besoin */
         justify-content: center; /* Centre le contenu */
     }
-
     header {
         width: 100%; /* Garde le header pleine largeur */
     }
-
     nav {
         flex: 1; /* Prend 1 partie de l'espace */
         min-width: 200px; /* Pour éviter qu'il devienne trop petit */
     }
-    
     main {
         flex: 2; /* Prend 2 parties de l'espace */
     }
-    
     aside {
         flex: 1; /* Prend 1 partie de l'espace */
         min-width: 150px; /* Pour éviter qu'il devienne trop petit */
     }
-    
     footer {
         width: 100%; /* Garde le footer pleine largeur */
     }
