@@ -6,12 +6,13 @@
 
 @font-face {
     font-family: 'HAN';
-    src: url(alagard.ttf) format('truetype');
+    src: url(../fon/alagard.ttf) format('truetype');
     
 }
 
 body, h1, h2, p, a {
     filter: blur(0.4px); /* Ajustez la valeur pour plus ou moins de flou */
+    text-shadow:00 25px #41306d51, 00 20px #41306d3a, 00 15px #41306d30, 00 10px #41306d21, 00 5px #41306d0b;
 }
 body {
     font-family: 'HAN';
@@ -19,8 +20,8 @@ body {
     display: flex;
     flex-direction: column;
     text-align: center;
-    background-color: #d8a8dd;
-    color: #000000;
+    background-color: #000000;
+    color: #80f5f5;
 }
 
 img{
@@ -36,7 +37,7 @@ h2 {
     font-family: 'HAN';
 }
 
-main { 
+main {    
     text-align: center;
     border-width: 1px;
     padding: 20px;
@@ -45,9 +46,10 @@ main {
     display: flex;
     flex-direction: column;
 }
+
 a {
+    color: #80f5f5;
     text-decoration: none;
-        color: #fffbee;
     border: 1px solid transparent;
     padding: 2px 4px;
     display: inline-block;
@@ -55,19 +57,22 @@ a {
 }
 
 a:hover {
-    color: #ffffff;
-    border-color: #ffffff;
+    color: #80f5f5;
+    border-color: #80f5f5;
 }
 
 a:link {
-    color: rgb(255, 255, 255);
+    color: #80f5f5;
     transition: color 0.2s, text-shadow 0.2s;
 }
 
 a:visited {
-    color: rgb(255, 0, 0);
-    border-color: #ff0000;
+    color: #80f5f5;
     transition: color 0.2s, text-shadow 0.2s;
+}
+
+a:hover {
+    color: #80f5f5;
 }
 
 a:active {
@@ -104,9 +109,27 @@ a:active {
     }
 }
 
+/* =============================
+   RESPONSIVE DESIGN (GRAND ÉCRAN)
+   ============================= */
 @media screen and (min-width: 1024px) {
     body {
-        max-width: 1200px; /* Limite la largeur du site */
+        max-width: 1200px;
         margin: auto; /* Centre le site */
     }
+}
+
+
+.dice-button {
+  padding: 3px 6px;
+  margin: 2px;
+  font-size: 12px;
+  background-color: transparent;
+  color: #80f5f5;
+  border: 1px solid #80f5f5;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.dice-button:hover {
+  background-color: transparent;
 }

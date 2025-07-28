@@ -6,7 +6,7 @@
 
 @font-face {
     font-family: 'HAN';
-    src: url(alagard.ttf) format('truetype');
+    src: url(../fon/alagard.ttf) format('truetype');
     
 }
 
@@ -78,6 +78,13 @@ a:hover {
 a:active {
     color: rgb(255, 0, 0);
     border-color: #ff0000;
+}
+
+.section {
+    display: none;
+}
+.section.active {
+    display: block;
 }
 
 .tree-column-list {
