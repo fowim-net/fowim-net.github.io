@@ -220,6 +220,17 @@ function openPlayer() {
         "Lecteur",
         "width=400,height=220,left=50,top=50,resizable=no,scrollbars=no"
     );
+
+    // Dès que la fenêtre est prête, tenter la lecture
+    playerWindow.onload = () => {
+        const lecteur = playerWindow.document.getElementById("lecteur");
+        lecteur.muted = true;
+        lecteur.play().then(() => {
+            lecteur.muted = false;
+        }).catch(err => {
+            console.log("Autoplay bloqué :", err);
+        });
+    };
 }
 function closePlayer() {
     if (playerWindow && !playerWindow.closed) {
