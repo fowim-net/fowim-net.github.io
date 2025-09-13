@@ -213,3 +213,62 @@ setupItemInput("magicName", "magicQty", "magicNote", "magicList");
 setupItemInput("curseName", null, "curseNote", "curseList");
 });
 
+let playerWindow = null;
+function openPlayer() {
+    playerWindow = window.open(
+        "player.html",
+        "Lecteur",
+        "width=400,height=220,left=50,top=50,resizable=no,scrollbars=no"
+    );
+}
+function closePlayer() {
+    if (playerWindow && !playerWindow.closed) {
+        playerWindow.close();
+    }
+}
+// Liste des musiques dans le dossier /musique
+const musiques = [
+"musique/Inscryption OST 16 - The Scrybe of Beasts.mp3",
+"musique/Lantern -- Summer Knight.mp3",
+"musique/Wizards of Aldur - Queen of Sorcery.mp3"
+];
+let index = 0;
+const lecteur = document.getElementById("lecteur");
+const loopBtn = document.getElementById("loop");
+const titre = document.getElementById("titre");
+
+// Charger la première musique
+function chargerMusique() {
+    lecteur.src = musiques[index];
+    lecteur.play();
+    const nom = musiques[index].split("/").pop(); // extrait le nom du fichier
+    titre.textContent = "🎵 En lecture : " + nom;
+}
+
+// Charger la première musique
+chargerMusique();
+
+function prevSong() {
+    index = (index - 1 + musiques.length) % musiques.length;
+    chargerMusique();
+}
+
+function nextSong() {
+    index = (index + 1) % musiques.length;
+    chargerMusique();
+}
+
+// Quand une musique finit → passer à la suivante (sauf si loop activé)
+lecteur.addEventListener("ended", () => {
+    if (lecteur.loop) return;
+    nextSong();
+});
+// Activer/désactiver le loop
+function toggleLoop() {
+    lecteur.loop = !lecteur.loop;
+    loopBtn.textContent = lecteur.loop ? " Loop: On" : " Loop: Off";
+}
+document.getElementById("prev").addEventListener("click", e => { e.preventDefault(); prevSong(); });
+document.getElementById("next").addEventListener("click", e => { e.preventDefault(); nextSong(); });
+loopBtn.addEventListener("click", e => { e.preventDefault(); toggleLoop(); });
+
