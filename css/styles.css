@@ -66,6 +66,27 @@ main {
     display: flex;
     flex-direction: column;
 }
+.articles {
+  padding: 8px;
+  margin: 3px ;
+  border-color: #fff;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+    border: 1px solid;
+}
+
+.exeption {
+    padding: 8px;
+    margin: 3px ;
+    border-color: #fff;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: 1px solid;
+}
 a {
     border-style: hidden;
     color: #fffbee;
