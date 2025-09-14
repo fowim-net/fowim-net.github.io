@@ -9,7 +9,7 @@
     
 }
 body, h1, h2, p, a {
-    filter: blur(0.4px); /* Ajustez la valeur pour plus ou moins de flou */
+    filter: blur(0.2px); /* Ajustez la valeur pour plus ou moins de flou */
 }
 body {
     font-family: 'HAN';

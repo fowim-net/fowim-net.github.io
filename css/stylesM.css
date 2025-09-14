@@ -8,11 +8,13 @@ box-sizing: border-box;
     src: url(../fon/alagard.ttf) format('truetype');
 }
 body, h1, h2, p, a {
-    filter: blur(0.4px); /* Ajustez la valeur pour plus ou moins de flou */
+    filter: blur(0.2px); /* Ajustez la valeur pour plus ou moins de flou */
 }
 body {
+    display: flex;
+    flex-direction: column;
     font-family: 'HAN';
-    font-size: 14px;
+    font-size: 11px;
     text-align: center;
     background-color: #000000;
     color: #fffbee;
@@ -20,7 +22,6 @@ body {
 img{
     width: 210px;
 }
-
 h1 {
     font-family: 'HAN';
     font-size: 82px;
@@ -28,19 +29,25 @@ h1 {
 h2 {
     font-family: 'HAN';
 }
-
+p{
+    border-style: hidden;
+    color: #fffbee;
+    text-decoration: none;
+    display: inline-block;
+    transition: border-color 0.3s, color 0.3s;
+    animation: rainbow 3s infinite;
+    text-decoration: none;
+}
 a {
     border-style: hidden;
     color: #fffbee;
     text-decoration: none;
-    border: 1px solid transparent;
     padding: 1.5px;
     display: inline-block;
     transition: border-color 0.3s, color 0.3s;
     animation: rainbow 3s infinite;
     text-decoration: none;
 }
-
 /* Animation multicolore */
 @keyframes rainbow {
     0% { color: red; }
@@ -60,8 +67,87 @@ a.multicolor:hover {
     transition: border-color 0.3s, color 0.3s;
 }
 
+/* 🎵 Style du lecteur custom */
+#player {
+margin: 10px auto;
+width: 280px;
+text-align: center;
+background: #1110;
+padding: 0px;
+font-family: 'HAN';
+}
 
+#controls a {
+border: none;
+cursor: pointer;
+}
 
+#timeline {
+display: flex;
+align-items: center;
+}
 
+#current-time,
+#duration {
+font-size: 10px;
+min-width: 30px;
+}
 
+#progress {
+flex: 1;
+margin: 0 6px;
+-webkit-appearance: none;
+appearance: none;
+height: 4px;
+background: #222;
+cursor: pointer;
+}
 
+#progress::-webkit-slider-thumb {
+-webkit-appearance: none;
+appearance: none;
+width: 10px;
+height: 10px;
+background: #fffbee;
+cursor: pointer;
+}
+
+#progress::-moz-range-thumb {
+width: 10px;
+height: 10px;
+background: #fffbee;
+cursor: pointer;
+}
+
+#volume-control {
+font-size: 10px;
+text-align: right;
+}
+
+#volume {
+width: 50px;
+height: 4px;
+-webkit-appearance: none;
+background: #222;
+cursor: pointer;
+}
+
+#volume::-webkit-slider-thumb {
+-webkit-appearance: none;
+width: 8px;
+height: 8px;
+background: #fffbee;
+}
+
+#volume::-moz-range-thumb {
+width: 8px;
+height: 8px;
+background: #fffbee;
+}
+
+#titre {
+display: block;
+margin-top: 6px;
+font-size: 12px;
+color: #fffbee;
+}

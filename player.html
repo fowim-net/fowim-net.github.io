@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="css/stylesM.css">
 </head>
 <body>
-<img src="IMG/QweenJ.png">
+<a href=""><img src="IMG/QweenJ.png"></a>
 <p>Un rat et un chien dans la souricière, c'était il y a bien longtemps</p>
 <p>Le rat était gros, faisait bien trop de bruit.</p>
 <p>Le chien était maigre avec un gros appétit, rien de très amusant.</p>
@@ -15,13 +15,27 @@
 <p>Les murs peuvent avoir des oreilles, mais le plafond aussi.</p>
 <p>Pauvre rat, pauvre chien, pour le confort d'une souris.</p>
 <br>
-<audio id="lecteur" controls></audio>
-<br>
-<div id="titre"> En lecture : (aucune)</div>
-<br>
-<a href="#" id="prev" class="multicolor"> Précédent</a>
-<a href="#" id="next" class="multicolor"> Suivant</a>
-<a href="#" id="loop" class="multicolor"> Loop: Off</a>
+<div>
+<audio id="lecteur"></audio>
+<div id="player">
+  <div id="controls">
+    <a id="prev">Précédent</a>
+    <a id="play">Play</a>
+    <a id="next">Suivant</a>
+    <a id="loop">Loop: Off</a>
+  </div>
+  <div>
+    <div id="timeline">
+      <span id="current-time">0:00</span>
+      <input type="range" id="progress" value="0" min="0" max="100">
+      <span id="duration">0:00</span>
+    </div>
+    <div id="volume-control">
+    <input type="range" id="volume" min="0" max="1" step="0.01" value="1">
+    </div>
+  </div>
+  <span id="titre"></span>
+</div>
 <script src="script.js"></script>
 </body>
 </html>
