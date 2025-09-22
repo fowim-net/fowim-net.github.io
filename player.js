@@ -36,7 +36,7 @@ const musiques = [
 "musique/Wizards of Aldur - Queen of Sorcery.mp3",
 "musique/Mountain Realm - Grayshadow Ruins Full Album - Dungeon Synth.mp3",
 "musique/Tales Under The Oak - And Yet Another Journey Begins.mp3",
-"musique/Cave Spellcaster - Troglodyte full album.mp3"
+"musique/Cave Spellcaster - Troglodyte full album.mp3",
 "musique/ddguntitled2.mp3"
 ];
 
