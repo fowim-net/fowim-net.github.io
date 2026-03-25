@@ -179,3 +179,12 @@ document.addEventListener("DOMContentLoaded", () => {
         setupItemInput("magicName", "magicQty", "magicNote", "magicList");
         setupItemInput("curseName", null, "curseNote", "curseList");
 });
+
+function showSection(id) {
+    document.querySelectorAll('.section').forEach(section => {
+        section.style.display = 'none';
+    });
+    document.getElementById(id).style.display = 'block';
+
+    window.scrollTo(0, 0);
+}

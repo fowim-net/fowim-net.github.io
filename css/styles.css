@@ -6,7 +6,7 @@
 @font-face {
     font-family: 'HAN';
     src: url(../fon/alagard.ttf) format('truetype');
-    
+
 }
 body, h1, h2, p, a {
     filter: blur(0.2px); /* Ajustez la valeur pour plus ou moins de flou */
@@ -70,7 +70,7 @@ main {
   padding: 8px;
   margin: 3px ;
   border-color: #fff;
-  height: 300px;
+  height: auto;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -81,12 +81,18 @@ main {
     padding: 8px;
     margin: 3px ;
     border-color: #fff;
-    height: 200px;
+    height: auto;
     display: flex;
     flex-direction: column;
     text-align: center;
     border: 1px solid;
 }
+
+.soft{
+    color: #80F527;
+}
+
+
 a {
     border-style: hidden;
     color: #fffbee;
@@ -155,7 +161,7 @@ ul{
 textarea {
     resize: none; /* Désactive le redimensionnement */
     height: 150px; /* Hauteur fixe */
-    
+
 }
 
 @media screen and (min-width: 768px) {
@@ -240,9 +246,9 @@ a.multicolor:hover {
     90%  { color: #91b762; }  /* Retour au vert mystique */
     100% { color: #91b762; }
 }
-.prog2-body h1, 
-.prog2-body h2, 
-.prog2-body p, 
+.prog2-body h1,
+.prog2-body h2,
+.prog2-body p,
 .prog2-body a {
     color: #91b762;
     text-shadow: 0 10px #41306d51, 0 5px #41306d3a, 0 2px #41306d30, 0 2px #41306d21, 0 1px #41306d0b;
@@ -387,7 +393,7 @@ button.decrease:hover {
     display: inline-block;
     min-width: 24px;
     border: 1px solid transparent;
-    border-radius: 4px;    
+    border-radius: 4px;
     animation: sorcellerie 60s ease-in-out infinite;
 }
 .dice-button,
