@@ -66,32 +66,6 @@ main {
     display: flex;
     flex-direction: column;
 }
-.articles {
-  padding: 8px;
-  margin: 3px ;
-  border-color: #fff;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-    border: 1px solid;
-}
-
-.exeption {
-    padding: 8px;
-    margin: 3px ;
-    border-color: #fff;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    border: 1px solid;
-}
-
-.soft{
-    color: #80F527;
-}
-
 
 a {
     border-style: hidden;
@@ -102,6 +76,98 @@ a {
     display: inline-block;
     transition: border-color 0.3s, color 0.3s;
 }
+
+/*DIALOG droit gauche*/
+.dialoL, .dialoR {
+
+    padding: 8px;
+    margin: -3px ;
+    height: auto;
+    padding-left: 13px;
+    padding-right: 13px;
+    border-color: #fff;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: 1px solid;
+    max-width: 310px;
+    clear: both;
+    border-style: dotted;
+    border-radius: 2px;
+}
+.dialoL {
+    float: left;
+}
+
+.dialoR {
+    float : right;
+}
+
+.dialo00, .dialoN {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top :4px;
+    max-width: 355px;
+    text-align: center;
+    padding: 1px;
+}
+
+.dialoN {
+    height: auto;
+    clear: both;
+    border: 1px solid;
+    border-style: dotted;
+    border-radius: 2px;
+    flex-direction: column;
+    padding-left: 13px;
+    padding-right: 13px;
+}
+
+.dialo00 {
+    border : hidden;
+    clear: both;
+}
+
+.papier {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    font-size: 11px;
+    justify-content:center;
+}
+.articles {
+    padding: 8px;
+    margin: 3px ;
+    border-color: #fff;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: 1px;
+    border-style: dotted;
+    max-width: 100px;
+}
+
+.exeption {
+    padding: 8px;
+    margin: 3px ;
+    border-color: #fff;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: 1px;
+    border-style: dotted;
+    max-width: 100px;
+}
+
+.credi{
+    font-size: 5px;
+}
+
+.soft{
+    color: #80F527;
+}
+
 a:hover {
     color: #fffbee;
     border-color: #fffbee;
@@ -124,12 +190,14 @@ a:active {
 ul{
     list-style-type: none;
 }
+
 .section {
     display: none;
 }
 .section.active {
     display: block;
 }
+
 .two-column-list {
     text-align: center;
     padding: 20px;
@@ -161,7 +229,6 @@ ul{
 textarea {
     resize: none; /* Désactive le redimensionnement */
     height: 150px; /* Hauteur fixe */
-
 }
 
 @media screen and (min-width: 768px) {
@@ -208,6 +275,14 @@ textarea {
     66.6% { color: cyan; }
     83.3% { color: violet; }
     100% { color: red; } /* boucle vers le début */
+}
+
+.multicolor
+{
+    animation: rainbow 1s infinite; /* Change de couleur rapidement */
+    text-decoration: none; /* Supprime le soulignement */
+    border: 1px solid transparent;
+    transition: border-color 0.3s, color 0.3s;
 }
 
 h2.multicolor {
@@ -278,6 +353,7 @@ a.multicolor:hover {
     border-color: #ff0000;
 }
 /*----*/
+
 /*--Libra--*/
 .switch {
   position: relative;
@@ -314,9 +390,9 @@ input:checked + .slider {
 }
 input:checked + .slider:before {
   transform: translateX(16px);
-
 }
 /*----*/
+
 /*--Dée--*/
 .dice-button {
   padding: 3px 6px;
@@ -360,6 +436,7 @@ input:checked + .slider:before {
   cursor: pointer;
 }
 /*--#f58080--*/
+
 /*--Note--*/
 textarea.note-text {
     height: 60px;
@@ -370,6 +447,7 @@ textarea.note-text {
     border-color: #91b762;;
 }
 /*----*/
+
 /*--Bouton--*/
 button.increase,
 button.decrease {
