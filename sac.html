@@ -9,274 +9,352 @@
         <link rel="stylesheet" href="css/styles.css">
         <link rel="icon" href="IMG/quest.ico" />
     </head>
-<body class="prog2-body">
+<body class="sac">
     <header><a href="index.html" style="border-style: hidden;"><h1>SAC À SOURIS</h1></a></header>
     <nav>
-        <div>
-            <br>
-            <h2>Malédiction / Buff</h2>
-            <div class="item-entry">
-                <input type="text" id="curseName" placeholder="Nom">
-                <input type="text" id="curseNote" placeholder="Effet / Détail">
-            </div>
-            <br>
-            <div class="item-list" id="curseList"></div>
-            <div>
-            <p>Bonus Habileté</p>
-            <button class="decrease" data-key="bonus-skill-hab">−</button>
-            <span class="stat" data-key="bonus-skill-hab" contenteditable="true">0</span>
-            <button class="increase" data-key="bonus-skill-hab">+</button>
-            </div>
-            <div>
-            <p>Bonus Endurance</p>
-            <button class="decrease" data-key="bonus-skill-end">−</button>
-            <span class="stat" data-key="bonus-skill-end" contenteditable="true">0</span>
-            <button class="increase" data-key="bonus-skill-end">+</button>
-            </div>
-            <div>
-            <p>Bonus Chance</p>
-            <button class="decrease" data-key="bonus-skill-cha">−</button>
-            <span class="stat" data-key="bonus-skill-cha" contenteditable="true">0</span>
-            <button class="increase" data-key="bonus-skill-cha">+</button>
-            </div>
-            <br>
-            <div class="toggle-libra">
-            <p>Aide de Libra :</p>
-            <label class="switch">
-                <input type="checkbox" id="libraToggle">
-                <span class="slider"></span>
-            </label>
-            <span id="libraState">Indisponible</span>
-            </div>
-            <br>
-            <div>
-            <p>Repas</p>
-            <button class="decrease" data-key="food">−</button>
-            <span class="stat" data-key="food">2</span>
-            <button class="increase" data-key="food">+</button>
-            </div>
-            <div>
-            <p>Or</p>
-            <button class="decrease" data-key="gold">−</button>
-            <span class="stat" data-key="gold">20</span>
-            <button class="increase" data-key="gold">+</button>
-            </div>
-            <div>
-            <p>Section</p>
-            <button class="decrease" data-key="sec">−</button>
-            <span class="stat" data-key="sec">0</span>
-            <button class="increase" data-key="sec">+</button>
-            </div>
-            <div>
-            <div class="item-entry">
-            <br>
-            <h2>Equipement</h2>
-                <input type="text" id="itemName" placeholder="Nom">
-                <input type="number" id="itemQty" placeholder="Quantité">
-                <input type="text" id="itemNote" placeholder="Note">
-            </div>
-            <br>
-            <div class="item-list" id="equipmentList"></div>
-            <h2>Objet magique</h2>
-            <div class="item-entry">
-                <input type="text" id="magicName" placeholder="Nom">
-                <input type="number" id="magicQty" placeholder="Quantité">
-                <input type="text" id="magicNote" placeholder="Note">
-            </div>
-            <br>
-            <div class="item-list" id="magicList"></div>
-            <br>
-            <textarea class="note-text" placeholder="Note"></textarea>
-        </div>
+    <h2>ALMANACH</h2>
+    <h3>(Sommaire)</h3>
+    <a onclick="showSection('Intro')"><h2>- Mise en garde</h2><h3>(Introduction)</h3></a>
+    <a onclick="showSection('Feuil')"><h2>- Feuille d’aventure </h2><h3>(Règle plateaux)</h3>
+        <ul>
+            <a onclick="showSection('Feuil')" href="#conflit"><li>Vois du conflit</li></a>
+            <a onclick="showSection('Feuil')" href="#mental"><li>Chemin mental</li></a>
+            <a onclick="showSection('Feuil')" href="#héroïque"><li>Quête héroïque</li></a>
+        </ul>
+    </a>
+    <a onclick="showSection('Regis')"><h2>- Registre des avatar </h2><h3>(Personnage)</h3></a>
+    <a onclick="showSection('Emble')"><h2>- Emblem </h2><h3>(Token)</h3></a>
+    <a onclick="showSection('Maevi')"><h2>- Magie et vitalité </h2><h3>(Mana et point de vie)</h3>
+        <ul>
+            <a onclick="showSection('Maevi')" href="#Soclf"><li>Sort Clef</li></a>
+            <a onclick="showSection('Maevi')" href="#Osgar"><li>Os & Gardiens</li></a>
+        </ul>
+    </a>
+    <a onclick="showSection('Etude')"><h2>- Etude Magique </h2><h3>(Compétence)</h3>
+        <ul>
+            <a onclick="showSection('Etude')" href="#Insect"><li>Insect</li></a>
+            <a onclick="showSection('Etude')" href="#Bouffon"><li>Bouffon</li></a>
+            <a onclick="showSection('Etude')" href="#Souverain"><li>Souverain</li></a>
+            <a onclick="showSection('Etude')" href="#Erudi"><li>Erudi</li></a>
+            <a onclick="showSection('Etude')" href="#Conjurateur"><li>Conjurateur</li></a>
+        </ul>
+    </a>
+    <a onclick="showSection('Arbre')"><h2>- Arbre de décision</h2>
+        <ul>
+            <a onclick="showSection('Arbre')" href="#Epée"><li>Epée</li></a>
+            <a onclick="showSection('Arbre')" href="#Soleil"><li>Soleil</li></a>
+            <a onclick="showSection('Arbre')" href="#Égout"><li>Égout</li></a>
+            <a onclick="showSection('Arbre')" href="#Arbre"><li>Arbre</li></a>
+        </ul>
+    </a>
+    <a onclick="showSection('Impor')"><h2>- Importante décision</h2>
+        <ul>
+            <a onclick="showSection('Impor')" href="#Quete"><li>Quete de l’epee</li></a>
+            <a onclick="showSection('Impor')" href="#Rayon"><li>Rayon du soleil</li></a>
+        </ul>
+    </a>
+    <a onclick="showSection('Revel')"><h2>-Révélation éthéré</h2>
+        <ul>
+            <a onclick="showSection('Revel')" href="#Personnelle"><li>Personnelle</li></a>
+            <a onclick="showSection('Revel')" href="#ArbreR"><li>Arbre</li></a>
+            <a onclick="showSection('Revel')" href="#SoleilR"><li>Soleil</li></a>
+            <a onclick="showSection('Revel')" href="#ÉgoutR"><li>Égout</li></a>
+            <a onclick="showSection('Revel')" href="#JeuxR"><li>Jeux</li></a>
+        </ul>
+    </a>
+    <a onclick="showSection('JEUX')"><h3>JEUX</h3></a>
     </nav>
     <main>
-        <div>
-            <a href="index.html" style="border-style: hidden;"><img src="IMG/chat.png" style="width: 350px;"></a>
-<p>SAC À SOURIS</p>
-<br>
-<p>Vous venez de faire votre entrée dans le monde de</p>
-<p>Sac à Souris.</p>
-<p>Dans cette aventure</p>
-<p>Vous serez confronté à la plus noble et périlleuse des quêtes à travers le non lieux d'Obasime.</p>
-<br>
-<p>Sorciers, Enchanteur, Marabout, Exorcist, Prêtre.</p>
-<br>
-<p>Il est temps de prouver que vous méritez votre titre.</p>
-<p>Les rouages du temps viennent frapper de leurs cliquetis, la première seconde de la fin des âges.</p>
-<br>
-        </div>
-        <h2>Heros</h2>
-        <section class="tree-column-list">
-            <ul>
-                <il>
-                    <p>Habileté</p>
-                    <button class="decrease" data-key="main-skill-hab">−</button>
-                    <span class="stat" data-key="main-skill-hab" contenteditable="true">0</span>
-                    <button class="increase" data-key="main-skill-hab">+</button>
-                </il>
-                <il>
-                    <p>Endurance</p>
-                    <button class="decrease" data-key="main-skill-end">−</button>
-                    <span class="stat" data-key="main-skill-end" contenteditable="true">0</span>
-                    <button class="increase" data-key="main-skill-end">+</button>
-                </il>
-                <il>
-                    <p>Chance</p>
-                    <button class="decrease" data-key="main-skill-cha">−</button>
-                    <span class="stat" data-key="main-skill-cha" contenteditable="true">0</span>
-                    <button class="increase" data-key="main-skill-cha">+</button>
-                </il>
-            </ul>
-        </section>
-        <h2>Bataille</h2>
-        <section class="tree-column-list">
-            <ul>
-                <li>
-                    <h2>Ennemi</h2>
-                    <p>Hab</p>
-                    <button class="decrease" data-key="enemy1-skill">−</button>
-                    <span class="stat" data-key="enemy1-skill" contenteditable="true">0</span>
-                    <button class="increase" data-key="enemy1-skill">+</button>
-                    <p>End</p>
-                    <button class="decrease" data-key="enemy1-endurance">−</button>
-                    <span class="stat" data-key="enemy1-endurance" contenteditable="true">0</span>
-                    <button class="increase" data-key="enemy1-endurance">+</button>
-                </li>
-                <li>
-                    <h2>Ennemi</h2>
-                    <p>Hab</p>
-                    <button class="decrease" data-key="enemy2-skill">−</button>
-                    <span class="stat" data-key="enemy2-skill" contenteditable="true">0</span>
-                    <button class="increase" data-key="enemy2-skill">+</button>
-                    <p>End</p>
-                    <button class="decrease" data-key="enemy2-endurance">−</button>
-                    <span class="stat" data-key="enemy2-endurance" contenteditable="true">0</span>
-                    <button class="increase" data-key="enemy2-endurance">+</button>
-                </li>
-                <li>
-                    <h2>Ennemi</h2>
-                    <p>Hab</p>
-                    <button class="decrease" data-key="enemy3-skill">−</button>
-                    <span class="stat" data-key="enemy3-skill" contenteditable="true">0</span>
-                    <button class="increase" data-key="enemy3-skill">+</button>
-                    <p>End</p>
-                    <button class="decrease" data-key="enemy3-endurance">−</button>
-                    <span class="stat" data-key="enemy3-endurance" contenteditable="true">0</span>
-                    <button class="increase" data-key="enemy3-endurance">+</button>
-                </li>
-                <li>
-                    <h2>Ennemi</h2>
-                    <p>Hab</p>
-                    <button class="decrease" data-key="enemy4-skill">−</button>
-                    <span class="stat" data-key="enemy4-skill" contenteditable="true">0</span>
-                    <button class="increase" data-key="enemy4-skill">+</button>
-                    <p>End</p>
-                    <button class="decrease" data-key="enemy4-endurance">−</button>
-                    <span class="stat" data-key="enemy4-endurance" contenteditable="true">0</span>
-                    <button class="increase" data-key="enemy4-endurance">+</button>
-                </li>
-                <li>
-                    <h2>Ennemi</h2>
-                    <p>Hab</p>
-                    <button class="decrease" data-key="enemy5-skill">−</button>
-                    <span class="stat" data-key="enemy5-skill" contenteditable="true">0</span>
-                    <button class="increase" data-key="enemy5-skill">+</button>
-                    <p>End</p>
-                    <button class="decrease" data-key="enemy5-endurance">−</button>
-                    <span class="stat" data-key="enemy5-endurance" contenteditable="true">0</span>
-                    <button class="increase" data-key="enemy5-endurance">+</button>
-                </li>
-                <li>
-                    <h2>Ennemi</h2>
-                    <p>Hab</p>
-                    <button class="decrease" data-key="enemy6-skill">−</button>
-                    <span class="stat" data-key="enemy6-skill" contenteditable="true">0</span>
-                    <button class="increase" data-key="enemy6-skill">+</button>
-                    <p>End</p>
-                    <button class="decrease" data-key="enemy6-endurance">−</button>
-                    <span class="stat" data-key="enemy6-endurance" contenteditable="true">0</span>
-                    <button class="increase" data-key="enemy6-endurance">+</button>
-                </li>
-            </ul>
+        <div class="dialo00" style="max-width: auto">
+            <a href="index.html" style="border-style: hidden;"><img src="IMG/chat_bet.png" style="width: 350px;"></a>
+            <p>SAC À SOURIS</p>
             <br>
-            <div class="dice-block">
-            <button id="rollDice" class="dice-button">Lancer les dés</button>
-            <p id="diceResult">D Gauche : ? | D Droite : ?| Total : ?</p>
-            </div>
+            <p>Vous venez de faire votre entrée dans le monde de</p>
+            <p>Sac à Souris.</p>
+            <p>Dans cette aventure</p>
+            <p>Vous serez confronté à la plus noble et périlleuse des quêtes à travers le non lieux d'Obasime.</p>
+            <br>
+            <p>Sorciers, Enchanteur, Marabout, Exorcist, Prêtre.</p>
+            <br>
+            <p>Il est temps de prouver que vous méritez votre titre.</p>
+            <p>Les rouages du temps viennent frapper de leurs cliquetis, la première seconde de la fin des âges.</p>
+            <div class="dialo00" style="height: 5px "></div>
+        </div>
+        <section id="JEUX" class="section">
+                <h2>Heros</h2>
+                <section class="tree-column-list">
+                    <ul>
+                        <il>
+                            <p>Habileté</p>
+                            <button class="decrease" data-key="main-skill-hab">−</button>
+                            <span class="stat" data-key="main-skill-hab" contenteditable="true">0</span>
+                            <button class="increase" data-key="main-skill-hab">+</button>
+                        </il>
+                        <il>
+                            <p>Endurance</p>
+                            <button class="decrease" data-key="main-skill-end">−</button>
+                            <span class="stat" data-key="main-skill-end" contenteditable="true">0</span>
+                            <button class="increase" data-key="main-skill-end">+</button>
+                        </il>
+                        <il>
+                            <p>Chance</p>
+                            <button class="decrease" data-key="main-skill-cha">−</button>
+                            <span class="stat" data-key="main-skill-cha" contenteditable="true">0</span>
+                            <button class="increase" data-key="main-skill-cha">+</button>
+                        </il>
+                    </ul>
+                </section>
+                <h2>Bataille</h2>
+                <section class="tree-column-list">
+                    <ul>
+                        <li>
+                            <h2>Ennemi</h2>
+                            <p>Hab</p>
+                            <button class="decrease" data-key="enemy1-skill">−</button>
+                            <span class="stat" data-key="enemy1-skill" contenteditable="true">0</span>
+                            <button class="increase" data-key="enemy1-skill">+</button>
+                            <p>End</p>
+                            <button class="decrease" data-key="enemy1-endurance">−</button>
+                            <span class="stat" data-key="enemy1-endurance" contenteditable="true">0</span>
+                            <button class="increase" data-key="enemy1-endurance">+</button>
+                        </li>
+                        <li>
+                            <h2>Ennemi</h2>
+                            <p>Hab</p>
+                            <button class="decrease" data-key="enemy2-skill">−</button>
+                            <span class="stat" data-key="enemy2-skill" contenteditable="true">0</span>
+                            <button class="increase" data-key="enemy2-skill">+</button>
+                            <p>End</p>
+                            <button class="decrease" data-key="enemy2-endurance">−</button>
+                            <span class="stat" data-key="enemy2-endurance" contenteditable="true">0</span>
+                            <button class="increase" data-key="enemy2-endurance">+</button>
+                        </li>
+                        <li>
+                            <h2>Ennemi</h2>
+                            <p>Hab</p>
+                            <button class="decrease" data-key="enemy3-skill">−</button>
+                            <span class="stat" data-key="enemy3-skill" contenteditable="true">0</span>
+                            <button class="increase" data-key="enemy3-skill">+</button>
+                            <p>End</p>
+                            <button class="decrease" data-key="enemy3-endurance">−</button>
+                            <span class="stat" data-key="enemy3-endurance" contenteditable="true">0</span>
+                            <button class="increase" data-key="enemy3-endurance">+</button>
+                        </li>
+                        <li>
+                            <h2>Ennemi</h2>
+                            <p>Hab</p>
+                            <button class="decrease" data-key="enemy4-skill">−</button>
+                            <span class="stat" data-key="enemy4-skill" contenteditable="true">0</span>
+                            <button class="increase" data-key="enemy4-skill">+</button>
+                            <p>End</p>
+                            <button class="decrease" data-key="enemy4-endurance">−</button>
+                            <span class="stat" data-key="enemy4-endurance" contenteditable="true">0</span>
+                            <button class="increase" data-key="enemy4-endurance">+</button>
+                        </li>
+                        <li>
+                            <h2>Ennemi</h2>
+                            <p>Hab</p>
+                            <button class="decrease" data-key="enemy5-skill">−</button>
+                            <span class="stat" data-key="enemy5-skill" contenteditable="true">0</span>
+                            <button class="increase" data-key="enemy5-skill">+</button>
+                            <p>End</p>
+                            <button class="decrease" data-key="enemy5-endurance">−</button>
+                            <span class="stat" data-key="enemy5-endurance" contenteditable="true">0</span>
+                            <button class="increase" data-key="enemy5-endurance">+</button>
+                        </li>
+                        <li>
+                            <h2>Ennemi</h2>
+                            <p>Hab</p>
+                            <button class="decrease" data-key="enemy6-skill">−</button>
+                            <span class="stat" data-key="enemy6-skill" contenteditable="true">0</span>
+                            <button class="increase" data-key="enemy6-skill">+</button>
+                            <p>End</p>
+                            <button class="decrease" data-key="enemy6-endurance">−</button>
+                            <span class="stat" data-key="enemy6-endurance" contenteditable="true">0</span>
+                            <button class="increase" data-key="enemy6-endurance">+</button>
+                        </li>
+                    </ul>
+                    <br>
+                    <div class="dice-block">
+                    <button id="rollDice" class="dice">Lancer les dés</button>
+                    <p id="diceResult">D Gauche : ? | D Droite : ?| Total : ?</p>
+                    </div>
+                </section>
+                <div>
+                    <br>
+                    <h2>Malédiction / Buff</h2>
+                    <div class="item-entry">
+                        <input type="text" id="curseName" placeholder="Nom">
+                        <input type="text" id="curseNote" placeholder="Effet / Détail">
+                    </div>
+                    <br>
+                    <div class="item-list" id="curseList"></div>
+                    <div>
+                    <p>Bonus Habileté</p>
+                    <button class="decrease" data-key="bonus-skill-hab">−</button>
+                    <span class="stat" data-key="bonus-skill-hab" contenteditable="true">0</span>
+                    <button class="increase" data-key="bonus-skill-hab">+</button>
+                    </div>
+                    <div>
+                    <p>Bonus Endurance</p>
+                    <button class="decrease" data-key="bonus-skill-end">−</button>
+                    <span class="stat" data-key="bonus-skill-end" contenteditable="true">0</span>
+                    <button class="increase" data-key="bonus-skill-end">+</button>
+                    </div>
+                    <div>
+                    <p>Bonus Chance</p>
+                    <button class="decrease" data-key="bonus-skill-cha">−</button>
+                    <span class="stat" data-key="bonus-skill-cha" contenteditable="true">0</span>
+                    <button class="increase" data-key="bonus-skill-cha">+</button>
+                    </div>
+                    <br>
+                    <div class="toggle-libra">
+                    <p>Aide de Libra :</p>
+                    <label class="switch">
+                        <input type="checkbox" id="libraToggle">
+                        <span class="slider"></span>
+                    </label>
+                    <span id="libraState">Indisponible</span>
+                    </div>
+                    <br>
+                    <div>
+                    <p>Repas</p>
+                    <button class="decrease" data-key="food">−</button>
+                    <span class="stat" data-key="food">2</span>
+                    <button class="increase" data-key="food">+</button>
+                    </div>
+                    <div>
+                    <p>Or</p>
+                    <button class="decrease" data-key="gold">−</button>
+                    <span class="stat" data-key="gold">20</span>
+                    <button class="increase" data-key="gold">+</button>
+                    </div>
+                    <div>
+                    <p>Section</p>
+                    <button class="decrease" data-key="sec">−</button>
+                    <span class="stat" data-key="sec">0</span>
+                    <button class="increase" data-key="sec">+</button>
+                    </div>
+                    <div>
+                    <div class="item-entry">
+                    <br>
+                    <h2>Equipement</h2>
+                        <input type="text" id="itemName" placeholder="Nom">
+                        <input type="number" id="itemQty" placeholder="Quantité">
+                        <input type="text" id="itemNote" placeholder="Note">
+                    </div>
+                    <br>
+                    <div class="item-list" id="equipmentList"></div>
+                    <h2>Objet magique</h2>
+                    <div class="item-entry">
+                        <input type="text" id="magicName" placeholder="Nom">
+                        <input type="number" id="magicQty" placeholder="Quantité">
+                        <input type="text" id="magicNote" placeholder="Note">
+                    </div>
+                    <br>
+                    <div class="item-list" id="magicList"></div>
+                    <br>
+                    <textarea class="note-text" placeholder="Note"></textarea>
+                </div>
         </section>
     </main>
-
-    <aside>   
-    <div>
-        <h2>ALMANACH</h2>
-        <ul>
-        <li><a onclick="showSection('Intro')"> - Mise en garde (Introduction)</a></li>
-        <li><a onclick="showSection('Plat')"> - Feuille d’aventure (Règle plateaux)</a></li> 
-        </ul>
-        <br>
-        <div id="Intro" class="section">
-        <p>MISE EN GARDE</p>
-        <p>(Introduction)</p>
-        <br>
-        <p>Sac a Souris et un Jeux de l'étrange ou plusieur fin son possible mais ou le but n’est pas clairement défini.</p>
-        <p>Chacun des Joueur incarner dans Sac a Souris et libre, ou non, d’aider c’est allier afin de progresser dans l'aventure.</p>
-        <p>Même si la liberté de vos actions pourra vous paraître limiter la majorité du temps, n'oubliez pas que la maîtrise de votre Magie n’est due qu'à la fougue de votre esprit.</p>
-        <p>Limiter votre pensée, viendrait limiter votre champ d’Action.</p>
-        <p>Une porte en bois s'ouvre en tournant la poignée serte.</p>
-        <p>mais on peut aussi déchausser les charniers, la crocheter, la faire disparaître avec un sort, la fracasser avec le talon ou tout simplement décider de ne pas l'ouvrir.</p>
-        <br>
-        <p>Voyant déjà venir les plus vicieux d'entre vous !</p>
-        <p>Cela ne veut pas dire que vos Actions n'ont aucune répercussion, votre position de Jouer vous place, au même titre que les autres, dans un rôle actif au centre d'un écosystème complexe.</p>
-        <p>Si vaux Agissement ou votre Comportement finit par être qualifié de “ dysfonctionnel ”.</p>
-        <p>Vous augmentez vos chances que le Jeu vous rejette tel l'organe malade que vous êtes !</p>
-        <br>
-        <p>N'oubliez pas la victoir est subjective</p>
-        <p>Analyser, comprendre les autres et votre environnement si vous suivez c’est conseil vous aurait peut être une chance de trouver votre chemin rapidement.</p>
-        <p>Vous n'êtes ni allié ni ennemi vous êtes simplement Prisonnier</p>
-        <br>
-        </div>
-        <div id="Plat" class="section">
-            <p>FEUILLE D’AVENTURE</p>
-<p>(Règles plateaux)</p>
-<br>
-<p>L’univer de Sac a Souris se traverse sur trois Plateaux de Jeux :</p>
-<p>Voix du conflit</p>
-<p>Chemin mental</p>
-<p>Quête héroïque</p>
-<br>
-<p>Chacune de ces Routes dispose de leur propre Règle et Objectif qui les différencie les une des autres.</p>
-<p>Chacune de ces Routes peut être complétée en résolvant les Épreuves qui les composent.</p>
-<p>Parfois commun, parfois individuel, l'accomplissement des différentes Épreuves permetterons a un Joueur ou à la Troupe d'obtenir des Récompense, Indice, Relique…</p>
-<p>Qui pourront par la suite servir tout au long des différentes Péripétie rencontrées.</p>
-<br>
-<p>Voix du conflit</p>
-<p>La Voie du conflit et la Route de la confrontation.</p>
-<p>Pour avancer sur cette destinée il vous faudra vaincre sans perte face l'armée des Gradien d’Obasime.</p>
-<p>Si telle est réellement votre souhait de la poursuivre, notez bien une chose.</p>
-<p>Vous comme tous les autres aventuriers de la Troupe n'êtes pas un guerrier expérimenté.</p>
-<p>Bien que votre Pouvoire n’est pas à débattre, il n’en reste pas moi que face à des Gardien “Immortelle”,</p>
-<p>Si vous ne savez pas ce que vous faites, vous risquez d’en payer fortement les conséquences.</p>
-<p>Bien entendu la Voie du conflit reste une Route à élucider comme les autres, a la différence que celui ci ne vous ouvrira que l’opportunités, d'être la pire engeance de ces lieux.</p>
-<p>Faire marche arrière reste peut être possible, bien que admettre l’erreur d'être un meurtrier a t il déjà ravi quelqu'un ?</p>
-<br>
-<p>Chemin mental</p>
-<p>Chemin mental bien connu de tous les savent des art interdit, comme palais de l’esprit.</p>
-<p>il est le lieu ou tout les force magique est vital circule en harmonie.</p>
-<p>Se perdre dans le Chemin mental apporte beaucoup de réponses sur ce que l’on est et ce que l’on peut devenir.</p>
-<p>Il renforce la Puissance Magique a chaque traversée.</p>
-<p>C'est un lieu paisible où ne règne que l’information, néanmoins une grande mise en garde est à retenir.</p>
-<p>Ce chemin a la capacité de corrompre les cœurs tant il peut résoudre chacun de vos désirs secrets.</p>
-<p>Personne ne sort du Chemin mental sens finir par douter de lui-même ou des autres.</p>
-<p>Quoi qu'il arrive, la magie vous gagnera toujours.</p>
-<br>
-<p>Quête héroïque</p>
-<p>la Quête héroïque et la matérialisation de l’arbre de vie au multiple branche qui ce bouscule, se rejoigne, se sépare.</p>
-<p>tout être vivant doté d’une âme même la plus sombre à sa Quête héroïque.</p>
-<p>Bien qu'elle reste la Route la plus limpide offert à nos yeux, les valeur de notre balance finis toujour par tombre sur du gris est il faudra bien fair un chois, noir ou blanc.</p>
-<p>Il n’est facile pour personne de trouver sa voie dans le vaste monde, heureusement quelque chose vous attire et vous guide à traver Obasime il ne vous reste plus cas Savoir par ou rejoindre ce quelque chose</p>
-<br>
-        </div>
-    </div>
+    <aside>
+            <section id="Intro" class="section">
+                <div class="dialoH">
+                    <p>MISE EN GARDE</p>
+                    <p>(Introduction)</p>
+                    <br>
+                    <p><strong>Sac a Souris</strong> et un <strong>Jeux</strong> de l'étrange ou plusieur fin son possible mais ou le but n’est pas clairement défini.</p>
+                    <p>Chacun des <strong>Joueur</strong> incarner dans <strong>Sac a Souris</strong> et libre, ou non, d’aider c’est allier afin de progresser dans l'aventure.</p>
+                    <p>Même si la liberté de vos actions pourra vous paraître limiter la majorité du temps, n'oubliez pas que la maîtrise de votre <strong>Magie</strong> n’est due qu'à la fougue de votre esprit.</p>
+                    <p>Limiter votre pensée, viendrait limiter votre champ d’<strong>Action.</strong></p>
+                    <p>Une porte en bois s'ouvre en tournant la poignée serte.</p>
+                    <p>mais on peut aussi déchausser les charniers, la crocheter, la faire disparaître avec un sort, la fracasser avec le talon ou tout simplement décider de ne pas l'ouvrir.</p>
+                    <br>
+                    <p>Voyant déjà venir les plus vicieux d'entre vous !</p>
+                    <p>Cela ne veut pas dire que vos <strong>Actions</strong> n'ont aucune répercussion, votre position de <strong>Jouer</strong> vous place, au même titre que les autres, dans un rôle actif au centre d'un écosystème complexe.</p>
+                    <p>Si vaux <strong>Agissement</strong> ou votre <strong>Comportement</strong> finit par être qualifié de “ dysfonctionnel ”.</p>
+                    <p>Vous augmentez vos chances que le <strong>Jeu</strong> vous rejette tel l'organe malade que vous êtes !</p>
+                    <br>
+                    <p><strong>N'oubliez pas la victoir est subjective</strong></p>
+                    <p>Analyser, comprendre les autres et votre environnement si vous suivez c’est conseil vous aurait peut être une chance de trouver votre chemin rapidement.</p>
+                    <p>Vous n'êtes ni allié ni ennemi vous êtes simplement <strong>Prisonnier</strong></p>
+                    <br>
+                </div>
+            </section>
+            <section id="Feuil" class="section">
+                <div class="dialoH">
+                    <p>FEUILLE D’AVENTURE</p>
+                    <p>(Règles plateaux)</p>
+                    <br>
+                    <p>L’univer de <strong>Sac a Souris</strong> se traverse sur trois <strong>Plateaux de Jeux</strong> :</p>
+                    <p><strong>oix du conflit</strong></p>
+                    <p><strong>Chemin mental</strong></p>
+                    <p><strong>Quête héroïque</strong></p>
+                    <br>
+                    <p>Chacune de ces <strong>Routes</strong> dispose de leur propre <strong>Règle</strong> et <strong>Objectif</strong> qui les différencie les une des autres.</p>
+                    <p>Chacune de ces <strong>Routes</strong> peut être complétée en résolvant les <strong>Épreuves</strong> qui les composent.</p>
+                    <p>Parfois commun, parfois individuel, l'accomplissement des différentes <strong>Épreuves</strong> permetterons a un <strong>Joueur</strong> ou à la <strong>Troupe</strong> d'obtenir des <strong>Récompense</strong>, <strong>Indice</strong>, <strong>Relique</strong>…</p>
+                    <p>Qui pourront par la suite servir tout au long des différentes <strong>Péripétie</strong> rencontrées.</p>
+                    <br>
+                    <div class="dialoH">
+                        <p><strong id="conflit">Voix du conflit</strong></p>
+                        <br>
+                        <p>La <strong>Voie du conflit</strong> et la <strong>Route</strong> de la confrontation.</p>
+                        <p>Pour avancer sur cette destinée il vous faudra vaincre sans perte face l'armée des <strong>Gradien</strong> d’<strong>Obasime</strong>.</p>
+                        <p>Si telle est réellement votre souhait de la poursuivre, notez bien une chose.</p>
+                        <p>Vous comme tous les autres aventuriers de la <strong>Troupe</strong> n'êtes pas un guerrier expérimenté.</p>
+                        <p>Bien que votre <strong>Pouvoire</strong> n’est pas à débattre, il n’en reste pas moi que face à des <strong>Gardien</strong> “<strong>Immortelle</strong>”,</p>
+                        <p>Si vous ne savez pas ce que vous faites, vous risquez d’en payer fortement les conséquences.</p>
+                        <p>Bien entendu la <strong>Voie du conflit</strong> reste une <strong>Route</strong> à élucider comme les autres, a la différence que celui ci ne vous ouvrira que l’opportunités, d'être la pire engeance de ces lieux.</p>
+                        <p>Faire marche arrière reste peut être possible, bien que admettre l’erreur d'être un meurtrier a t il déjà ravi quelqu'un ?</p>
+                        <br>
+                    </div>
+                    <div class="dialoH">
+                        <p><strong id="mental">Chemin mental</strong></p>
+                        <br>
+                        <p><strong>Chemin mental</strong> bien connu de tous les savent des art interdit, comme palais de l’esprit.</p>
+                        <p>il est le lieu ou tout les force magique est vital circule en harmonie.</p>
+                        <p>Se perdre dans le <strong>Chemin mental</strong> apporte beaucoup de réponses sur ce que l’on est et ce que l’on peut devenir.</p>
+                        <p>Il renforce la <strong>Puissance Magique</strong> a chaque traversée.</p>
+                        <p>C'est un lieu paisible où ne règne que l’information, néanmoins une grande mise en garde est à retenir.</p>
+                        <p>Ce chemin a la capacité de corrompre les cœurs tant il peut résoudre chacun de vos désirs secrets.</p>
+                        <p>Personne ne sort du <strong>Chemin mental</strong> sens finir par douter de lui-même ou des autres.</p>
+                        <p>Quoi qu'il arrive, la magie vous gagnera toujours.</p>
+                        <br>
+                    </div>
+                    <div class="dialoH">
+                        <p><strong id="héroïque">Quête héroïque</strong></p>
+                        <br>
+                        <p>la <strong>Quête héroïque</strong> et la matérialisation de l’arbre de vie au multiple branche qui ce bouscule, se rejoigne, se sépare.</p>
+                        <p>tout être vivant doté d’une âme même la plus sombre à sa <strong>Quête héroïque</strong>.</p>
+                        <p>Bien qu'elle reste la Route la plus limpide offert à nos yeux, les valeur de notre balance finis toujour par tombre sur du gris est il faudra bien fair un chois, noir ou blanc.</p>
+                        <p>Il n’est facile pour personne de trouver sa voie dans le vaste monde, heureusement quelque chose vous attire et vous guide à traver <strong>Obasime</strong> il ne vous reste plus cas <strong>Savoir</strong> par ou rejoindre ce quelque chose</p>
+                        <br>
+                    </div>
+                </div>
+            </section>
+            <section id="Regis" class="section">
+            <div class="dialoH"></div>
+            </section>
+            <section id="Emble" class="section">
+            <div class="dialoH"></div>
+            </section>
+            <section id="Maevi" class="section">
+            <div class="dialoH"></div>
+            </section>
+            <section id="Etude" class="section">
+            <div class="dialoH"></div>
+            </section>
+            <section id="Arbre" class="section">
+            <div class="dialoH"></div>
+            </section>
+            <section id="Impor" class="section">
+            <div class="dialoH"></div>
+            </section>
+            <section id="Revel" class="section">
+            <div class="dialoH"></div>
+            </section>
     </aside>
     <script src="sor.js">
     </script>

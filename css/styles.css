@@ -10,6 +10,7 @@
 }
 body, h1, h2, p, a {
     filter: blur(0.2px); /* Ajustez la valeur pour plus ou moins de flou */
+    text-shadow:00 25px #41306d51, 00 20px #41306d3a, 00 15px #41306d30, 00 10px #41306d21, 00 5px #41306d0b;
 }
 body {
     font-family: 'HAN';
@@ -48,6 +49,8 @@ header {
     justify-content: center;
 }
 nav {
+    flex-direction: column;
+    display: flex;
     padding: 0.5em;
     width: 100%;
     font-size: 12px;
@@ -66,7 +69,6 @@ main {
     display: flex;
     flex-direction: column;
 }
-
 a {
     border-style: hidden;
     color: #fffbee;
@@ -76,8 +78,9 @@ a {
     display: inline-block;
     transition: border-color 0.3s, color 0.3s;
 }
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*//////////////////////////////////////////////////////*BOX_BOX_BOX///////////////////////////////////////////////////////////////*/
 
-/*DIALOG droit gauche*/
 .dialoL, .dialoR {
 
     padding: 8px;
@@ -113,6 +116,19 @@ a {
 }
 
 .dialoN {
+    height: auto;
+    clear: both;
+    border: 1px solid;
+    border-style: dotted;
+    border-radius: 2px;
+    flex-direction: column;
+    padding-left: 13px;
+    padding-right: 13px;
+}
+
+.dialoH {
+    padding :10px;
+    max-width: auto;
     height: auto;
     clear: both;
     border: 1px solid;
@@ -321,6 +337,96 @@ a.multicolor:hover {
     90%  { color: #91b762; }  /* Retour au vert mystique */
     100% { color: #91b762; }
 }
+@keyframes sacasouris {
+    0%   { color: #80f5f5; }
+    15%  { color: #9bdeff; }
+    30%  { color: #acecff; }
+    45%  { color: #c0fcff; }
+    60%  { color: #94f5ff; }
+    75%  { color: #b2edff; }
+    90%  { color: #97d3ff; }
+    100% { color: #89ffff; }
+}
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*//////////////////////////////////////////////////////*BODY_BODY_BODY///////////////////////////////////////////////////////////////*/
+
+.sac h1,
+.sac h2,
+.sac h3,
+.sac p {
+    filter: blur(0.4px); /* Ajustez la valeur pour plus ou moins de flou */
+    text-shadow:00 25px #41306d51, 00 20px #41306d3a, 00 15px #41306d30, 00 10px #41306d21, 00 5px #41306d0b;
+    transition: border-color 0.3s, color 0.3s ;
+    animation: sacasouris 60s infinite;
+    text-decoration: none;
+}
+.sac img{
+    width: 110px;
+}
+
+.sac h1 {
+    font-size: 82px;
+}
+.sac h2 {
+    font-size: 12px;
+    padding-top: 5px;
+}
+
+.sac h3 {
+    font-size: 11px;
+    padding-bottom: 5px;
+}
+.sac a {
+    color: #394747;
+    text-decoration: none;
+    border: 1px solid transparent;
+    padding: 2px 4px;
+    display: inline-block;
+    transition: border-color 0.3s, color 0.3s;
+}
+.sac a:hover {
+    color: #ff35f2;
+}
+.sac a:link {
+/*    color: #80f5f5;*/
+    transition: color 0.2s, text-shadow 0.2s;
+}
+.sac a:visited {
+/*    color: #80f5f5;*/
+    transition: color 0.2s, text-shadow 0.2s;
+}
+.sac a:hover {
+    transition: border-color 0.2s, color 0.2s ;
+    /*animation: sacasouris 60s infinite;*/
+    border-color: #ff35f2;
+}
+.sac a:active {
+    color: rgb(255, 0, 0);
+    border-color: #ff35f2;
+}
+
+.sac strong {
+    color: #ff35f2;
+}
+.sac strong:hover {
+    color: #ff35f2;
+}
+.dice {
+    padding: 3px 6px;
+    margin: 2px;
+    font-size: 12px;
+    background-color: transparent;
+    color: #80f5f5;
+    border: 1px solid #80f5f5;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.dice:hover {
+    background-color: transparent;
+}
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*//////////////////////////////////////////////////////*BODY_BODY_BODY///////////////////////////////////////////////////////////////*/
 .prog2-body h1,
 .prog2-body h2,
 .prog2-body p,
